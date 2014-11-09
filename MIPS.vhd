@@ -66,8 +66,8 @@ component ALU_Wrapper is
            Operand2 : out  STD_LOGIC_VECTOR(31 downto 0);
            Status	 : out  STD_LOGIC(2 downto 0);
 			  ALU_zero		: out STD_LOGIC;
-			  ALU_greater	: out STD_LOGIC;
-	   )
+			  ALU_greater	: out STD_LOGIC);
+	   
 end component;
 
 --end component;

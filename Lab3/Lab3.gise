@@ -190,20 +190,10 @@
     </transform>
     <transform xil_pn:end_ts="1415618338" xil_pn:in_ck="4720317262624507007" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2220966145549401943" xil_pn:start_ts="1415618337">
       <status xil_pn:value="SuccessfullyRun"/>
-<<<<<<< HEAD
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-=======
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="srl_testbench_isim_beh.wdb"/>
->>>>>>> origin/master
     </transform>
     <transform xil_pn:end_ts="1414515878" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1414515878">
       <status xil_pn:value="SuccessfullyRun"/>

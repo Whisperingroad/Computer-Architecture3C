@@ -37,6 +37,7 @@ entity ALU_Wrapper is
 			  ALU_InA : in  STD_LOGIC_VECTOR(31 downto 0);
            ALU_InB : in  STD_LOGIC_VECTOR(31 downto 0);
            Control : in  STD_LOGIC(7 downto 0);
+			  rt : in STD_LOGIC(4 downto 0);
 			  Result1 : out  STD_LOGIC (31 downto 0);
            Result2 : out STD_LOGIC (31 downto 0);
            Operand1 : out  STD_LOGIC_VECTOR(31 downto 0);
@@ -106,7 +107,12 @@ when "01" => --branch instructions
 
 	case Control(5 downto 0) is --opcode
 	when "000100" => ALU_control <= Control(5) & "" ; --beq
-	when "000001" => ALU_control <= Control(5) & "" ; --bgez /bgezal
+	when "000001" => 
+	if rt = x"0001" then --bgez
+	ALU_control <= Control(5) & "00001" ; 
+	else --bgezal
+	ALU_control <= Control(5) & "00010" ; 
+	end if;
 	when "001111" => ALU_control <= Control(5) & "" ; --lui
 	when others => 
 	end case;

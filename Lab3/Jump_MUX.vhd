@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    15:29:29 11/10/2014 
+-- Create Date:    21:43:10 11/10/2014 
 -- Design Name: 
--- Module Name:    Branch_MUX - Behavioral 
+-- Module Name:    Jump_MUX - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,28 +29,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Branch_MUX is
-    Port ( SignExtend : in STD_LOGIC_VECTOR (31 downto 0);
-           PC_out : in STD_LOGIC_VECTOR (31 downto 0);
-           ALU_greater : in  STD_LOGIC;
-           ALU_zero : in  STD_LOGIC;
-			  Branch : in STD_LOGIC;
-           Branch_out: out STD_LOGIC_VECTOR(31 downto 0));
-end Branch_MUX;
+entity Jump_MUX is
+    Port ( Branch : in STD_LOGIC_VECTOR (31 downto 0);
+           Jump : in STD_LOGIC_VECTOR (31 downto 0);
+           Jump_control : in  STD_LOGIC;
+           Jump_out : out  STD_LOGIC_VECTOR (31 downto 0));
+end Jump_MUX;
 
-architecture Behavioral of Branch_MUX is
-signal Shifted	: STD_LOGIC_VECTOR (31 downto 0); 
+architecture Behavioral of Jump_MUX is
+
+begin
+process(Branch,Jump,Jump_control)
 begin
 
-process(SignExtend,PC_out,ALU_greater,ALU_zero,Branch)
-begin
+if Jump_control = '1' then
+Jump_out <= Jump;
 
-Shifted <=  (SignExtend(29 downto 0) & "00") + PC_out; 
-if (ALU_zero = '1' and Branch = '1') then
-	PC_in <= Shifter;
 else
-	Branch_out <= PC_out;
+Jump_out <= Branch;
 end if;
-end process;	
+
+end process;
 end Behavioral;
 

@@ -1,0 +1,26 @@
+﻿Revert "Merge remote-tracking branch 'origin/master'"
+
+This reverts commit 6780058a3fb840155051f9dab0b98124b0d5d794, reversing
+changes made to 1415178825ab0c068b3baee671a63bf759c492f8.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# You are currently reverting commit 1415178.
+#
+# Changes to be committed:
+#	modified:   Lab3/ALU_Wrapper.vhd
+#	modified:   Lab3/Lab3.gise
+#	modified:   Lab3/Lab3.xise
+#	modified:   Lab3/iseconfig/Lab3.projectmgr
+#	deleted:    Lab3/sll_testbench.vhd
+#	deleted:    Lab3/sra_testbench.vhd
+#	deleted:    Lab3/srl_testbench.vhd
+#	modified:   MIPS.vhd
+#	deleted:    sll_shifter.vhd
+#	deleted:    sra_shifter.vhd
+#	deleted:    srl_shifter.vhd
+#
+

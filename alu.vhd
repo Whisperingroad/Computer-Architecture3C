@@ -207,7 +207,7 @@ case state is
 				Result1 <= Shift_Output;			
 		--beq
 		when "00100" =>
-			equal := (Operand1 xor Operand2);
+			equal <= (Operand1 xor Operand2);
 			if equal = x"0000" then
 			ALU_zero <= '1';
 			else 

@@ -112,27 +112,7 @@ when "01" => --branch instructions
 	end case;
 	
 when "10" => -- R-type
-
-	case Control(5 downto 0) is --funct
-	when "100000" => ALU_control <= Control(5) & "00010" ; --add
-	when "100010" => ALU_control <= Control(5) & "00110" ; --sub
-	when "100100" => ALU_control <= Control(5) & "00000" ; --and
-	when "100101" => ALU_control <= Control(5) & "00001" ; --or
-	when "100110" => ALU_control <= Control(5) & "00111" ; --slt
-	when "100111" => ALU_control <= Control(5) & "01100" ; --nor
-	when "011000" => ALU_control <= Control(5) & "10000" ; --mult
-	when "011001" => ALU_control <= Control(5) & "10001" ; --multu
-	when "010000" => ALU_control <= Control(5) & "" ; --mfhi
-	when "010010" => ALU_control <= Control(5) & "" ; --mflo
-	when "000000" => ALU_control <= Control(5) & "00101" ; --sll
-	when "000011" => ALU_control <= Control(5) & "01001" ; --sra
-	when "000010" => ALU_control <= Control(5) & "01101" ; --srl
-	when "000100" => ALU_control <= Control(5) & "" ; --sllv
-	when "101001" => ALU_control <= Control(5) & "01110" ; --sltu
-	when "000011" => ALU_control <= Control(5) & "01001" ; --sra
-	when "000000" => ALU_control <= Control(5) & "" ; --jr
-	when others =>
-	end case;
+	ALU_control <= Control(5 downto 0);
 
 when others => ALU_control <= Control(5) & "XXXXX"; --j/jal 
 end case;

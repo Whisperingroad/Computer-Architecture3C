@@ -139,27 +139,6 @@ component Sign_Extend is
            signExtendOutput : out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
-----------------------------------------------------------------
--- Mutliplexer for Branch
-----------------------------------------------------------------
-component Branch_MUX is
-    Port ( SignExtend : in STD_LOGIC_VECTOR (31 downto 0);
-           PC : in STD_LOGIC_VECTOR (31 downto 0);
-           Greater_flag : in  STD_LOGIC;
-           Zero_flag : in  STD_LOGIC;
-			  Branch_control : in STD_LOGIC;
-           Branch_out: out STD_LOGIC_VECTOR(31 downto 0));
-end component;
-
-----------------------------------------------------------------
--- Multiplexer for Jump
-----------------------------------------------------------------
-component Jump_MUX is
-    Port ( Branch_signal : in STD_LOGIC_VECTOR (31 downto 0);
-           Jump_addr : in STD_LOGIC_VECTOR (31 downto 0);
-           Jump_control : in  STD_LOGIC;
-           Jump_out : out  STD_LOGIC_VECTOR (31 downto 0));
-end component;
 
 ----------------------------------------------------------------
 -- PC Signals
@@ -349,15 +328,10 @@ Instr(15 downto 0)& x"0000" when InstrtoReg = '1' else -- LUI
 x"0000" & Instr(15 downto 0) when SignExtend = '0' else -- ORI
 signExtendout; -- LW/SW/SLTI
 
-----MUX signals
---Zero_flag <= ALU_zero;
---SignExtend <= signExtendout;
---Greater_flag <= ALU_greater;
---PC <= PC_out
-
 --PC
 PC_in <= PCplus4 + (signExtendout(29 downto 0) & "00")  when ((Branch = '1') and (ALU_zero = '1')) else -- Branch (beq) 
-PCplus4 + (signExtendout(29 downto 0) & "00")  when Branch = '1' and ALU_greater = '1' else -- Branch (bgez/bgezal) 
+PCplus4 + (signExtendout(29 downto 0) & "00")  when ((Branch = '1')and (ALU_greater = '1')) else -- Branch (bgez/bgezal) 
+ReadData1_Reg when ((Jump = '1') and (Control(5 downto 0) = "001000")) else --JR
 PCplus4(31 downto 28) &(Instr(25 downto 0)& "00") when Jump = '1' else --J/JAL
 PCplus4; -- R-type / Lw/ Sw
 

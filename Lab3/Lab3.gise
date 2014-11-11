@@ -227,11 +227,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415681975" xil_pn:in_ck="-4726328037342767935" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4484949452818678784" xil_pn:start_ts="1415681964">
+    <transform xil_pn:end_ts="1415701119" xil_pn:in_ck="8694356723178802298" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4484949452818678784" xil_pn:start_ts="1415701110">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="MIPS.lso"/>
       <outfile xil_pn:name="MIPS.ngc"/>
       <outfile xil_pn:name="MIPS.ngr"/>

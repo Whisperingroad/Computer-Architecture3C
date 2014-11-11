@@ -21,6 +21,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_unsigned.ALL;
 
 entity MIPS is -- DO NOT modify the interface (entity)
+generic (width 	: integer := 32);
     Port ( 	
 			Addr_Instr 		: out STD_LOGIC_VECTOR (31 downto 0);
 			Instr 			: in STD_LOGIC_VECTOR (31 downto 0);
@@ -59,12 +60,12 @@ component ALU_Wrapper is
 		     Clk : in STD_LOGIC;
 			  ALU_InA : in  STD_LOGIC_VECTOR(31 downto 0);
            ALU_InB : in  STD_LOGIC_VECTOR(31 downto 0);
-           Control : in  STD_LOGIC(7 downto 0);
-			  Result1 : out  STD_LOGIC (31 downto 0);
-           Result2 : out STD_LOGIC (31 downto 0);
+           Control : in  STD_LOGIC_VECTOR(7 downto 0);
+			  Result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           Result2 : out STD_LOGIC_VECTOR (31 downto 0);
            Operand1 : out  STD_LOGIC_VECTOR(31 downto 0);
            Operand2 : out  STD_LOGIC_VECTOR(31 downto 0);
-           Status	 : out  STD_LOGIC(2 downto 0);
+           Status	 : out  STD_LOGIC_VECTOR(2 downto 0);
 			  ALU_zero		: out STD_LOGIC;
 			  ALU_greater	: out STD_LOGIC);
 	   
@@ -137,7 +138,7 @@ end component;
 	signal	ALU_InA 		:  STD_LOGIC_VECTOR (31 downto 0);
 	signal	ALU_InB 		:  STD_LOGIC_VECTOR (31 downto 0);
 	signal	ALU_Control	:  STD_LOGIC_VECTOR (7 downto 0);
-	signal   Control     :  STD_LOGIC(7 downto 0);
+	signal   Control     :  STD_LOGIC_VECTOR(7 downto 0);
 
 	signal	Operand1		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
 	signal	Operand2		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
@@ -203,7 +204,7 @@ PC1				: PC port map
 ----------------------------------------------------------------
 -- ALU port map
 ----------------------------------------------------------------
-ALU_Wrapper				: ALU_Wrapper port map
+ALU_Wrapper1				: ALU_Wrapper port map
 						(
 						Clk => Clk,
 						ALU_InA 	=> ALU_InA, 

@@ -36,12 +36,12 @@ entity ALU_Wrapper is
 	        Clk : in STD_LOGIC;
 			  ALU_InA : in  STD_LOGIC_VECTOR(31 downto 0);
            ALU_InB : in  STD_LOGIC_VECTOR(31 downto 0);
-           Control : in  STD_LOGIC(7 downto 0);
-			  Result1 : out  STD_LOGIC (31 downto 0);
-           Result2 : out STD_LOGIC (31 downto 0);
+           Control : in  STD_LOGIC_VECTOR(7 downto 0);
+			  Result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           Result2 : out STD_LOGIC_VECTOR (31 downto 0);
            Operand1 : out  STD_LOGIC_VECTOR(31 downto 0);
            Operand2 : out  STD_LOGIC_VECTOR(31 downto 0);
-           Status	 : out  STD_LOGIC(2 downto 0);
+           Status	 : out  STD_LOGIC_VECTOR(2 downto 0);
 			  ALU_zero		: out STD_LOGIC;
 			  ALU_greater	: out STD_LOGIC);
 			  		

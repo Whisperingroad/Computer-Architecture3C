@@ -169,7 +169,7 @@ case state is
 				Status(0) <= '0';
 			end if;
 			
-		--slt
+		--slt or slti
 		when "00111" =>
 		
 		--SUM(31) is the MSB, which is the sign

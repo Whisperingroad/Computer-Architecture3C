@@ -214,14 +214,8 @@ case state is
 			ALU_zero <= '0';
 			end if;
 			
-		--bgez
+		--bgez/bgezal
 		when "00001" =>
-			if Operand1 >= x"0000" then
-			ALU_greater <= '1'; --branch target address
-			end if;
-		
-		--bgezal
-		when "00010" =>
 			if Operand1 >= x"0000" then
 			ALU_greater <= '1'; --branch target address
 			end if;

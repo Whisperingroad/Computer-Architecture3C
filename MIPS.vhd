@@ -138,11 +138,34 @@ component Sign_Extend is
     Port ( signExtendInput : in  STD_LOGIC_VECTOR (15 downto 0);
            signExtendOutput : out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
+
+----------------------------------------------------------------
+-- Mutliplexer for Branch
+----------------------------------------------------------------
+component Branch_MUX is
+    Port ( SignExtend : in STD_LOGIC_VECTOR (31 downto 0);
+           PC : in STD_LOGIC_VECTOR (31 downto 0);
+           Greater_flag : in  STD_LOGIC;
+           Zero_flag : in  STD_LOGIC;
+			  Branch_control : in STD_LOGIC;
+           Branch_out: out STD_LOGIC_VECTOR(31 downto 0));
+end component;
+
+----------------------------------------------------------------
+-- Multiplexer for Jump
+----------------------------------------------------------------
+component Jump_MUX is
+    Port ( Branch_signal : in STD_LOGIC_VECTOR (31 downto 0);
+           Jump_addr : in STD_LOGIC_VECTOR (31 downto 0);
+           Jump_control : in  STD_LOGIC;
+           Jump_out : out  STD_LOGIC_VECTOR (31 downto 0));
+end component;
+
 ----------------------------------------------------------------
 -- PC Signals
 ----------------------------------------------------------------
 	signal	PC_in 		:  STD_LOGIC_VECTOR (31 downto 0);
-	signal	PC_out 		:  STD_LOGIC_VECTOR (31 downto 0);
+	signal	PCplus4 		:  STD_LOGIC_VECTOR (31 downto 0);
 
 ----------------------------------------------------------------
 -- ALU Signals
@@ -216,7 +239,7 @@ begin
 PC1				: PC port map
 						(
 						PC_in 	=> PC_in, 
-						PC_out 	=> PC_out, 
+						PC_out 	=> PCplus4, 
 						RESET 	=> RESET,
 						CLK 		=> CLK
 						);
@@ -294,8 +317,6 @@ SignExtend1 				: Sign_Extend port map
 						signExtendInput => signExtendin, 
 						signExtendOutput => signExtendout 						
 						);
-						
-
 ----------------------------------------------------------------
 -- Processor logic
 ----------------------------------------------------------------
@@ -322,27 +343,38 @@ ALU_InA  <= ReadData1_Reg;
 
 --for R type and BEQ operations 
 
-ALU_InB <= ReadData2_Reg when ALUSrc = '0' else
---ALUSrc = 1 
+ALU_InB <= ReadData2_Reg when ALUSrc = '0' else 
 Instr(15 downto 0)& x"0000" when InstrtoReg = '1' else -- LUI
 --x"0000" & Instr(15 downto 0) when ALUOp = "11" and InstrtoReg = '0' else --ORI
 x"0000" & Instr(15 downto 0) when SignExtend = '0' else -- ORI
-signExtendout; -- LW/SW
+signExtendout; -- LW/SW/SLTI
+
+----MUX signals
+--Zero_flag <= ALU_zero;
+--SignExtend <= signExtendout;
+--Greater_flag <= ALU_greater;
+--PC <= PC_out
 
 --PC
-PC_in <= PC_out + (signExtendout(29 downto 0) & "00")  when Branch = '1' and ALU_zero = '1' else -- Branch (beq) 
-PC_out(31 downto 28) &(Instr(25 downto 0)& "00") when Jump = '1' else --Jump
-PC_out; -- R-type / Lw/ Sw
+PC_in <= PCplus4 + (signExtendout(29 downto 0) & "00")  when ((Branch = '1') and (ALU_zero = '1')) else -- Branch (beq) 
+PCplus4 + (signExtendout(29 downto 0) & "00")  when Branch = '1' and ALU_greater = '1' else -- Branch (bgez/bgezal) 
+PCplus4(31 downto 28) &(Instr(25 downto 0)& "00") when Jump = '1' else --J/JAL
+PCplus4; -- R-type / Lw/ Sw
 
 --RegFile
-WriteAddr_Reg <= Instr(20 downto 16) when RegDst = '0' else -- choose rt or rd
+WriteAddr_Reg <= x"1111" when ((Instr(20 downto 16) = x"1001") and (ALU_greater = '1') and (Control(4 downto 0) = "00001")) else --BGEZAL 
+x"1111" when (Instr(31 downto 26) = x"000011") else --JAL
+Instr(20 downto 16) when RegDst = '0' else -- choose rt or rd 
 Instr(15 downto 11);
-WriteData_Reg <= ALU_Out when MemtoReg = '0' else -- choose rt or rd
+
+WriteData_Reg <= (PCplus4 + 4) when ((Instr(20 downto 16) = x"1001") and (ALU_greater = '1') and (Control(4 downto 0) = "00001")) else --BGEZAL 
+(PCplus4 + 4) when (Instr(31 downto 26) = x"000011") else --JAL
+Result1 when MemtoReg = '0' else -- choose rt or rd
 DATA_In; 
 
 --Output to top file
-Addr_Instr <= PC_out;
-Addr_Data <= ALU_Out;
+Addr_Instr <= PCplus4;
+Addr_Data <= Result1;
 Data_Out <= ReadData2_Reg;
  
 

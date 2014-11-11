@@ -28,6 +28,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ControlUnit.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ControlUnit.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HILO_reg.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="HILO_reg.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="HILO_reg.xst"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="MIPS.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="MIPS.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MIPS.ngc"/>
@@ -206,16 +209,12 @@
     <transform xil_pn:end_ts="1415681975" xil_pn:in_ck="-4726328037342767935" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4484949452818678784" xil_pn:start_ts="1415681964">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="MIPS.lso"/>
-      <outfile xil_pn:name="MIPS.ngc"/>
-      <outfile xil_pn:name="MIPS.ngr"/>
-      <outfile xil_pn:name="MIPS.prj"/>
-      <outfile xil_pn:name="MIPS.syr"/>
-      <outfile xil_pn:name="MIPS.xst"/>
-      <outfile xil_pn:name="MIPS_xst.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1414416157" xil_pn:in_ck="2201737817411850" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4761561076636022434" xil_pn:start_ts="1414416157">
       <status xil_pn:value="SuccessfullyRun"/>

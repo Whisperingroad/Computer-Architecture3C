@@ -70,7 +70,7 @@ begin
 		ALUSrc <= '1';
 		SignExtend <= '1';
 		RegWrite <= '0';
-		RegDst <= 'X';	
+		RegDst <= 'X';		
 
 
 	--addi
@@ -117,6 +117,21 @@ begin
 		SignExtend <= '0';
 		RegWrite <= '1';
 		RegDst <= '0';
+		
+	--slti
+	when "001010" =>
+		ALUOp <= "00";
+		Branch <= '0';
+		Jump <= '0';
+		MemRead <= '0';
+		MemToReg <= '0';
+		InstrtoReg <= '0';
+		MemWrite <= '0';
+		ALUSrc <= '1';
+		SignExtend <= '1';
+		RegWrite <= '1';
+		RegDst <= '0';
+		
 
 
 	--ADD,SUB, OR, NOR, SLT , MULT, MULTU, MFHI, MFLO, SLL, SRA, SRL, SLLV, SLTU, JR

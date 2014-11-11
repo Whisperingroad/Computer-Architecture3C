@@ -28,7 +28,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity alu is
 generic (width 	: integer := 32);
 Port (Clk			: in	STD_LOGIC;
-		Control		: in	STD_LOGIC_VECTOR (5 downto 0);
+		ALU_Control		: in	STD_LOGIC_VECTOR (5 downto 0);
 		Operand1		: in	STD_LOGIC_VECTOR (width-1 downto 0);
 		Operand2		: in	STD_LOGIC_VECTOR (width-1 downto 0);
 		Result1		: out	STD_LOGIC_VECTOR (width-1 downto 0);
@@ -69,10 +69,9 @@ component Shift is
 			--clk : in std_logic;
 			Shift_Controls :in STD_LOGIC_VECTOR(1 downto 0); --(0) is for direction, (1) is for shift type
 			Operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
-           Operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
-           Result1 : out  STD_LOGIC_VECTOR (31 downto 0);
-           Result2 : out  STD_LOGIC_VECTOR (31 downto 0));
-end component Shift;
+           Operand2 : in  STD_LOGIC_VECTOR (4 downto 0);
+           Result1 : out  STD_LOGIC_VECTOR (31 downto 0));
+end component;
 
 ----------------------------------------------------------------------------
 -- ADDSUB signals
@@ -99,12 +98,12 @@ signal Result2_multi		: STD_LOGIC_VECTOR (width-1 downto 0) := (others => '0');
 signal done		 			: STD_LOGIC := '0';
 --signal div_count : std_logic_vector(15 downto 0) := (others => '0');
 
-signal equal : STD_LOGIC_VECTOR(width-1 downto 0);
+--signal equal : STD_LOGIC_VECTOR(width-1 downto 0);
 begin
 
 -- <port maps>
-ADDSUBer : ADDSUB generic map (width =>  width) port map (  A=>Operand1, B=>Operand2, INVERSE=>CONTROL(2), SUM=>SUM, CARRY=>CARRY );
-Shifter : Shift port map(Operand1=>Operand1, Operand2=>Operand2, Shift_Controls=> Control(3 downto 2), Result1=>Shift_output, Result2 => Shift_output2);
+ADDSUBer : ADDSUB generic map (width =>  width) port map (  A=>Operand1, B=>Operand2, INVERSE=>ALU_CONTROL(2), SUM=>SUM, CARRY=>CARRY );
+Shifter : Shift port map(Operand1=>Operand1, Operand2=>Operand2(4 downto 0), Shift_Controls=> ALU_Control(3 downto 2), Result1=>Shift_output);
 -- </port maps>
 
 
@@ -112,7 +111,7 @@ Shifter : Shift port map(Operand1=>Operand1, Operand2=>Operand2, Shift_Controls=
 -- COMBINATIONAL PROCESS
 ----------------------------------------------------------------------------
 COMBINATIONAL_PROCESS : process (
-											Control, Operand1, Operand2, state, -- external inputs
+											ALU_Control, Operand1, Operand2, state, -- external inputs
 											SUM, Shift_output, CARRY, -- SUM: output from addsub, Shift_output : output from shifter
 											Result1_multi, Result2_multi, done -- from multi-cycle process(es)
 											)
@@ -123,6 +122,8 @@ begin
 Status(2 downto 0) <= "000"; -- both statuses '0' by default 
 Result1 <= (others=>'0');
 Result2 <= (others=>'0');
+ALU_greater <= '0';
+ALU_zero <= '0';
 
 n_state <= state;
 
@@ -131,13 +132,13 @@ n_state <= state;
 -- </default outputs>
 
 --reset
-if Control(5) = '1' then
+if ALU_Control(5) = '1' then
 	n_state <= COMBINATIONAL;
 else
 
 case state is
 	when COMBINATIONAL =>
-		case Control(4 downto 0) is
+		case ALU_Control(4 downto 0) is
 		--and
 		when "00000" =>   -- takes 0 cycles to execute
 			Result1 <= Operand1 and Operand2;
@@ -207,17 +208,19 @@ case state is
 				Result1 <= Shift_Output;			
 		--beq
 		when "00100" =>
-			equal <= (Operand1 xor Operand2);
-			if equal = x"0000" then
+			--equal <= (Operand1 xor Operand2);
+			if (Operand1 xor Operand2) = x"0000" then
 			ALU_zero <= '1';
 			else 
 			ALU_zero <= '0';
 			end if;
 			
 		--bgez/bgezal
-		when "00001" =>
+		when "00011" =>
 			if Operand1 >= x"0000" then
 			ALU_greater <= '1'; --branch target address
+			else
+			ALU_greater <= '0';
 			end if;
 			
 		-- multi-cycle operations mult, multu, div, divu
@@ -295,10 +298,9 @@ variable divisor_temp_unsigned: std_logic_vector(width-1 downto 0) := (others =>
 
 begin  
    if (Clk'event and Clk = '1') then 
-		if Control(5) = '1' then
+		if ALU_Control(5) = '1' then
 			count := (others => '0'); 
 			temp_sum := (others => '0');
-			
 			quotient  := (others => '0'); 
 			remainder:= (others => '0'); 
 			dividend:= (others => '0');
@@ -308,12 +310,14 @@ begin
 			temp_div_MSB := (others => '0');
 			temp_operand1 := (others => '0');
 			temp_operand2 := (others => '0');
+		else
+			-- do nothing
 	
 					
 		end if;
 		done <= '0';
 		if n_state = MULTI_CYCLE then
-			case Control(4 downto 0) is			
+			case ALU_Control(4 downto 0) is			
 			when "10000" | "10001" =>  -- takes 34 cycles to execute, returns Op1 * Op2 )
 				if state = COMBINATIONAL then  -- n_state = MULTI_CYCLE and state = COMBINATIONAL implies we are just transitioning into MULTI_CYCLE
 					temp_sum := (others => '0');
@@ -324,7 +328,7 @@ begin
 					sign_op2 := Operand2(width-1);
 					result_sign := Operand1(width-1) xor Operand2(width-1); --check sign of result
 					
-					if Control(0) = '0' then
+					if ALU_Control(0) = '0' then
 					inverse_bits := (others => sign_op1);
 					temp_op1(width-1 downto 0) := (Operand1 xor inverse_bits) + sign_op1; --change to unsigned number
 					inverse_bits := (others => sign_op2);
@@ -338,7 +342,7 @@ begin
 			else	
 				count := count+1;		
 				if count=x"0021" then
-					if Control(0) = '0' then
+					if ALU_Control(0) = '0' then
 					inverse_result := (others => result_sign);
     				temp_sum := (temp_sum xor inverse_result) + result_sign;
 					end if;

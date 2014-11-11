@@ -39,8 +39,8 @@ entity ALU_Wrapper is
            Control : in  STD_LOGIC_VECTOR(7 downto 0);
 			  Result1 : out  STD_LOGIC_VECTOR (31 downto 0);
            Result2 : out STD_LOGIC_VECTOR (31 downto 0);
-           Operand1 : out  STD_LOGIC_VECTOR(31 downto 0);
-           Operand2 : out  STD_LOGIC_VECTOR(31 downto 0);
+--           Operand1 : out  STD_LOGIC_VECTOR(31 downto 0);
+--           Operand2 : out  STD_LOGIC_VECTOR(31 downto 0);
            Status	 : out  STD_LOGIC_VECTOR(2 downto 0);
 			  ALU_zero		: out STD_LOGIC;
 			  ALU_greater	: out STD_LOGIC);
@@ -60,7 +60,7 @@ component ALU is
 			Result1		: out	STD_LOGIC_VECTOR (31 downto 0);
 			Result2		: out	STD_LOGIC_VECTOR (31 downto 0);
 			Status		: out	STD_LOGIC_VECTOR (2 downto 0);
-			ALU_Control	: out  STD_LOGIC_VECTOR (5 downto 0);
+			ALU_Control	: in  STD_LOGIC_VECTOR (5 downto 0);
 			ALU_zero		: out STD_LOGIC;
 			ALU_greater	: out STD_LOGIC);
 end component;
@@ -90,25 +90,24 @@ ALU1 				: ALU port map
 --logic code
 ----------------------------------------------------------------
 
-process(Control,ALU_InA,ALU_InB)
+process(Control)
 begin
 case Control(7 downto 6) is --ALU_Op
 when "00" => --memory instructions lw/sw
 	
 	case Control(5 downto 0) is --funct
-	when "001000" => ALU_control <= Control(5) & "" ; --addi
-	when "001101" => ALU_control <= Control(5) & "" ; --ori
-	when "001111" => ALU_control <= Control(5) & "" ; --lui
+	when "001000" => ALU_control <= Control(5) & "00010" ; --addi
+	when "001101" => ALU_control <= Control(5) & "XXXXX" ; --ori
+	when "001111" => ALU_control <= Control(5) & "XXXXX" ; --lui
 	when others => ALU_control <= Control (5 downto 0); --lw/sw
 	end case;
 
 when "01" => --branch instructions	
 
 	case Control(5 downto 0) is --funct
-	when "000100" => ALU_control <= Control(5) & "" ; --beq
-	when "000001" => ALU_control <= Control(5) & "" ; --bgez /bgezal
-	when "001111" => ALU_control <= Control(5) & "" ; --lui
-	when others => 
+	when "000100" => ALU_control <= Control(5) & "00100" ; --beq
+	when "000001" => ALU_control <= Control(5) & "00011" ; --bgez /bgezal
+	when others => ALU_control <= Control(5) & "XXXXX";
 	end case;
 	
 when "10" => -- R-type

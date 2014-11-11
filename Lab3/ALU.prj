@@ -1,1 +1,6 @@
-vhdl work "../ALU.vhd"
+vhdl work "../srl_shifter.vhd"
+vhdl work "../sra_shifter.vhd"
+vhdl work "../sll_shifter.vhd"
+vhdl work "../../Computer-Architecture/Shift.vhd"
+vhdl work "../../Computer-Architecture/ADDSUB.vhd"
+vhdl work "../alu.vhd"

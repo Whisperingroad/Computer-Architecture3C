@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: TOP.prj
 
@@ -105,25 +105,46 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\RegFile.vhd" into library work
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\srl_shifter.vhd" into library work
+Parsing entity <srl_shifter>.
+Parsing architecture <Behavioral> of entity <srl_shifter>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\sra_shifter.vhd" into library work
+Parsing entity <sra_shifter>.
+Parsing architecture <Behavioral> of entity <sra_shifter>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\sll_shifter.vhd" into library work
+Parsing entity <sll_shifter>.
+Parsing architecture <Behavioral> of entity <sll_shifter>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture\Shift.vhd" into library work
+Parsing entity <Shift>.
+Parsing architecture <Behavioral> of entity <shift>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture\ADDSUB.vhd" into library work
+Parsing entity <ADDSUB>.
+Parsing architecture <ADDSUB_arch> of entity <addsub>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\alu.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\RegFile.vhd" into library work
 Parsing entity <RegFile>.
 Parsing architecture <arch_RegFile> of entity <regfile>.
-Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\PC.vhd" into library work
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\PC.vhd" into library work
 Parsing entity <PC>.
 Parsing architecture <arch_PC> of entity <pc>.
-Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\Lab3\SignExtend.vhd" into library work
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\SignExtend.vhd" into library work
 Parsing entity <Sign_Extend>.
 Parsing architecture <Behavioral> of entity <sign_extend>.
-Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\ControlUnit.vhd" into library work
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\HILO_reg.vhd" into library work
+Parsing entity <HILO_reg>.
+Parsing architecture <Behavioral> of entity <hilo_reg>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\ALU_Wrapper.vhd" into library work
+Parsing entity <ALU_Wrapper>.
+Parsing architecture <Behavioral> of entity <alu_wrapper>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\ControlUnit.vhd" into library work
 Parsing entity <ControlUnit>.
 Parsing architecture <arch_ControlUnit> of entity <controlunit>.
-Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\ALU.vhd" into library work
-Parsing entity <ALU>.
-Parsing architecture <arch_ALU> of entity <alu>.
-Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\MIPS.vhd" into library work
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" into library work
 Parsing entity <MIPS>.
 Parsing architecture <arch_MIPS> of entity <mips>.
-Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\TOP.vhd" into library work
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\TOP.vhd" into library work
 Parsing entity <TOP>.
 Parsing architecture <arch_TOP> of entity <top>.
 
@@ -133,16 +154,29 @@ Parsing architecture <arch_TOP> of entity <top>.
 
 Elaborating entity <TOP> (architecture <arch_TOP>) from library <work>.
 
-Elaborating entity <MIPS> (architecture <arch_MIPS>) from library <work>.
+Elaborating entity <MIPS> (architecture <arch_MIPS>) with generics from library <work>.
 
 Elaborating entity <PC> (architecture <arch_PC>) from library <work>.
 
-Elaborating entity <ALU> (architecture <arch_ALU>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\ALU.vhd" Line 76. Case statement is complete. others clause is never selected
+Elaborating entity <ALU_Wrapper> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <alu> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ADDSUB> (architecture <ADDSUB_arch>) with generics from library <work>.
+
+Elaborating entity <Shift> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sll_shifter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <srl_shifter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sra_shifter> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ControlUnit> (architecture <arch_ControlUnit>) from library <work>.
 
 Elaborating entity <RegFile> (architecture <arch_RegFile>) from library <work>.
+
+Elaborating entity <HILO_reg> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Sign_Extend> (architecture <Behavioral>) from library <work>.
 
@@ -151,7 +185,7 @@ Elaborating entity <Sign_Extend> (architecture <Behavioral>) from library <work>
 =========================================================================
 
 Synthesizing Unit <TOP>.
-    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\TOP.vhd".
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\TOP.vhd".
     Found 256x32-bit single-port RAM <Mram_DATA_MEM> for signal <DATA_MEM>.
     Found 1-bit register for signal <LED<6>>.
     Found 1-bit register for signal <LED<5>>.
@@ -163,10 +197,10 @@ Synthesizing Unit <TOP>.
     Found 26-bit register for signal <CLK_DIV_PROCESS.clk_counter>.
     Found 1-bit register for signal <CLK>.
     Found 1-bit register for signal <LED<7>>.
-    Found 26-bit adder for signal <CLK_DIV_PROCESS.clk_counter[25]_GND_5_o_add_12_OUT> created at line 235.
+    Found 26-bit adder for signal <CLK_DIV_PROCESS.clk_counter[25]_GND_5_o_add_12_OUT> created at line 253.
     Found 256x32-bit Read Only RAM for signal <Addr_Instr[9]_GND_5_o_wide_mux_8_OUT>
-    Found 32-bit comparator lessequal for signal <n0000> created at line 180
-    Found 32-bit comparator lessequal for signal <n0002> created at line 180
+    Found 32-bit comparator lessequal for signal <n0000> created at line 198
+    Found 32-bit comparator lessequal for signal <n0002> created at line 198
     Summary:
 	inferred   2 RAM(s).
 	inferred   1 Adder/Subtractor(s).
@@ -176,15 +210,18 @@ Synthesizing Unit <TOP>.
 Unit <TOP> synthesized.
 
 Synthesizing Unit <MIPS>.
-    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\MIPS.vhd".
-    Found 32-bit adder for signal <PC_out[31]_signExtendout[29]_add_9_OUT> created at line 262.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd".
+        width = 32
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" line 229: Output port <Status> of the instance <ALU_Wrapper1> is unconnected or connected to loadless signal.
+    Found 32-bit adder for signal <PCplus4[31]_signExtendout[29]_add_18_OUT> created at line 334.
+    Found 32-bit adder for signal <PCplus4[31]_GND_6_o_add_50_OUT> created at line 358.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  34 Multiplexer(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  47 Multiplexer(s).
 Unit <MIPS> synthesized.
 
 Synthesizing Unit <PC>.
-    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\PC.vhd".
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\PC.vhd".
     Found 1-bit register for signal <PC_out<31>>.
     Found 1-bit register for signal <PC_out<30>>.
     Found 1-bit register for signal <PC_out<29>>.
@@ -223,31 +260,127 @@ Synthesizing Unit <PC>.
 	inferred  32 D-type flip-flop(s).
 Unit <PC> synthesized.
 
-Synthesizing Unit <ALU>.
-    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\ALU.vhd".
-    Found 32-bit adder for signal <AplusB> created at line 43.
-    Found 32-bit subtractor for signal <AminusB> created at line 38.
-    Found 32-bit 4-to-1 multiplexer for signal <ALU_Out> created at line 51.
+Synthesizing Unit <ALU_Wrapper>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\ALU_Wrapper.vhd".
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<4>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<3>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<2>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<1>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<0>> created at line 95.
+    Summary:
+	inferred  10 Multiplexer(s).
+Unit <ALU_Wrapper> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\alu.vhd".
+        width = 32
+    Found 16-bit register for signal <MULTI_CYCLE_PROCESS.count>.
+    Found 64-bit register for signal <MULTI_CYCLE_PROCESS.temp_sum>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.quotient>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.remainder>.
+    Found 16-bit register for signal <MULTI_CYCLE_PROCESS.div_count>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_div_MSB>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_operand1>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_operand2>.
+    Found 1-bit register for signal <done>.
+    Found 64-bit register for signal <MULTI_CYCLE_PROCESS.temp_op1>.
+    Found 1-bit register for signal <MULTI_CYCLE_PROCESS.result_sign>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_op2>.
+    Found 32-bit register for signal <Result2_multi>.
+    Found 32-bit register for signal <Result1_multi>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.dividend_temp>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.divisor_temp>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.divisor_temp_unsigned>.
+    Found 1-bit register for signal <state>.
+    Found 32-bit adder for signal <Operand1[31]_GND_10_o_add_33_OUT> created at line 333.
+    Found 32-bit adder for signal <Operand2[31]_GND_10_o_add_35_OUT> created at line 335.
+    Found 16-bit adder for signal <MULTI_CYCLE_PROCESS.count[15]_GND_10_o_add_38_OUT> created at line 343.
+    Found 64-bit adder for signal <MULTI_CYCLE_PROCESS.temp_sum[63]_GND_10_o_add_41_OUT> created at line 347.
+    Found 64-bit adder for signal <MULTI_CYCLE_PROCESS.temp_sum[63]_MULTI_CYCLE_PROCESS.temp_op1[63]_add_44_OUT> created at line 356.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.temp_div_MSB[31]_MULTI_CYCLE_PROCESS.temp_operand2[31]_add_102_OUT> created at line 412.
+    Found 32-bit adder for signal <n0479> created at line 420.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.temp_div_MSB[31]_MULTI_CYCLE_PROCESS.temp_operand2[31]_add_105_OUT> created at line 420.
+    Found 16-bit adder for signal <MULTI_CYCLE_PROCESS.div_count[15]_GND_10_o_add_111_OUT> created at line 434.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.temp_div_MSB[31]_MULTI_CYCLE_PROCESS.temp_operand2[31]_add_113_OUT> created at line 441.
+    Found 32-bit adder for signal <Operand1[31]_GND_10_o_add_127_OUT> created at line 482.
+    Found 32-bit adder for signal <Operand2[31]_GND_10_o_add_130_OUT> created at line 485.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.remainder[31]_MULTI_CYCLE_PROCESS.divisor_temp_unsigned[31]_add_133_OUT> created at line 495.
+    Found 32-bit adder for signal <n0496> created at line 500.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.remainder[31]_GND_10_o_add_136_OUT> created at line 500.
+    Found 16-bit adder for signal <MULTI_CYCLE_PROCESS.div_count[15]_GND_10_o_add_138_OUT> created at line 510.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.divisor_temp_unsigned[31]_MULTI_CYCLE_PROCESS.remainder[31]_add_140_OUT> created at line 514.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.quotient[31]_GND_10_o_add_143_OUT> created at line 517.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.remainder[31]_GND_10_o_add_146_OUT> created at line 520.
+    Found 32-bit comparator greater for signal <Operand1[31]_Operand2[31]_LessThan_66_o> created at line 378
+    Summary:
+	inferred  18 Adder/Subtractor(s).
+	inferred 515 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 132 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <ADDSUB>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture\ADDSUB.vhd".
+        width = 32
+    Found 33-bit adder for signal <n0020> created at line 58.
+    Found 33-bit adder for signal <SUM_WIDER> created at line 58.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred   2 Multiplexer(s).
-Unit <ALU> synthesized.
+Unit <ADDSUB> synthesized.
+
+Synthesizing Unit <Shift>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture\Shift.vhd".
+    Found 32-bit 4-to-1 multiplexer for signal <Result1> created at line 37.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Shift> synthesized.
+
+Synthesizing Unit <sll_shifter>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\sll_shifter.vhd".
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <sll_shifter> synthesized.
+
+Synthesizing Unit <srl_shifter>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\srl_shifter.vhd".
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <srl_shifter> synthesized.
+
+Synthesizing Unit <sra_shifter>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\sra_shifter.vhd".
+    Summary:
+	inferred 186 Multiplexer(s).
+Unit <sra_shifter> synthesized.
 
 Synthesizing Unit <ControlUnit>.
-    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\ControlUnit.vhd".
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\ControlUnit.vhd".
+    Found 32x1-bit Read Only RAM for signal <Jump>
+    Found 8x1-bit Read Only RAM for signal <ALUSrc>
+    Found 32x1-bit Read Only RAM for signal <SignExtend>
+    Found 4x1-bit Read Only RAM for signal <RegDst>
+    Found 64x7-bit Read Only RAM for signal <_n0077>
     Summary:
-	no macro.
+	inferred   5 RAM(s).
 Unit <ControlUnit> synthesized.
 
 Synthesizing Unit <RegFile>.
-    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\RegFile.vhd".
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\RegFile.vhd".
     Found 32x32-bit dual-port RAM <Mram_registers> for signal <registers>.
     Summary:
 	inferred   2 RAM(s).
 Unit <RegFile> synthesized.
 
+Synthesizing Unit <HILO_reg>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\HILO_reg.vhd".
+    Found 32-bit register for signal <reg_Lo>.
+    Found 32-bit register for signal <reg_Hi>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <HILO_reg> synthesized.
+
 Synthesizing Unit <Sign_Extend>.
-    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecure-Lab3\Lab3\SignExtend.vhd".
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\SignExtend.vhd".
     Summary:
 	no macro.
 Unit <Sign_Extend> synthesized.
@@ -256,33 +389,170 @@ Unit <Sign_Extend> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 4
+# RAMs                                                 : 9
  256x32-bit single-port RAM                            : 1
  256x32-bit single-port Read Only RAM                  : 1
+ 32x1-bit single-port Read Only RAM                    : 2
  32x32-bit dual-port RAM                               : 2
-# Adders/Subtractors                                   : 5
+ 4x1-bit single-port Read Only RAM                     : 1
+ 64x7-bit single-port Read Only RAM                    : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 24
+ 16-bit adder                                          : 3
  26-bit adder                                          : 1
- 32-bit adder                                          : 3
- 32-bit subtractor                                     : 1
-# Registers                                            : 42
- 1-bit register                                        : 41
+ 32-bit adder                                          : 16
+ 33-bit adder                                          : 2
+ 64-bit adder                                          : 2
+# Registers                                            : 62
+ 1-bit register                                        : 44
+ 16-bit register                                       : 2
  26-bit register                                       : 1
-# Comparators                                          : 2
+ 32-bit register                                       : 13
+ 64-bit register                                       : 2
+# Comparators                                          : 3
+ 32-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 39
- 1-bit 2-to-1 multiplexer                              : 29
- 32-bit 2-to-1 multiplexer                             : 8
+# Multiplexers                                         : 391
+ 1-bit 2-to-1 multiplexer                              : 237
+ 1-bit 3-to-1 multiplexer                              : 5
+ 16-bit 2-to-1 multiplexer                             : 13
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 118
  32-bit 4-to-1 multiplexer                             : 1
- 5-bit 2-to-1 multiplexer                              : 1
-# Xors                                                 : 3
- 1-bit xor2                                            : 3
+ 5-bit 2-to-1 multiplexer                              : 3
+ 64-bit 2-to-1 multiplexer                             : 9
+# Xors                                                 : 11
+ 1-bit xor2                                            : 6
+ 32-bit xor2                                           : 4
+ 64-bit xor2                                           : 1
 
 =========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_0> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_1> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_2> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_3> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_4> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_5> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_6> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_7> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_8> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_9> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_10> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_11> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_12> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_13> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_14> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_15> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_16> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_17> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_18> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_19> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_20> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_21> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_22> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_23> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_24> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_25> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_26> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_27> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_28> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_29> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_30> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_0> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_1> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_2> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_3> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_4> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_5> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_6> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_7> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_8> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_9> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_10> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_11> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_12> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_13> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_14> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_15> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_16> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_17> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_18> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_19> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_20> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_21> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_22> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_23> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_24> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_25> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_26> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_27> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_28> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_29> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_30> of sequential type is unconnected in block <ALU1>.
+
+Synthesizing (advanced) Unit <ControlUnit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Jump> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode<5:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Jump>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ALUSrc> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode<3:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <ALUSrc>        |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RegDst> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode<2:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <RegDst>        |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0077> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SignExtend> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(opcode<5>,opcode<3:0>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <SignExtend>    |          |
+    -----------------------------------------------------------------------
+Unit <ControlUnit> synthesized (advanced).
 
 Synthesizing (advanced) Unit <RegFile>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -345,32 +615,108 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Addr_Instr[9]_GND_5_o_wide_mux_8_OUT
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <TOP> synthesized (advanced).
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_0> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_1> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_2> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_3> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_4> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_5> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_6> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_7> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_8> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_9> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_10> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_11> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_12> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_13> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_14> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_15> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_16> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_17> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_18> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_19> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_20> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_21> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_22> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_23> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_24> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_25> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_26> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_27> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_28> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_29> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_30> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_0> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_1> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_2> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_3> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_4> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_5> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_6> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_7> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_8> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_9> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_10> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_11> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_12> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_13> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_14> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_15> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_16> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_17> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_18> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_19> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_20> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_21> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_22> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_23> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_24> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_25> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_26> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_27> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_28> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_29> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_30> of sequential type is unconnected in block <alu>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 4
+# RAMs                                                 : 9
  256x32-bit single-port distributed RAM                : 1
  256x32-bit single-port distributed Read Only RAM      : 1
+ 32x1-bit single-port distributed Read Only RAM        : 2
  32x32-bit dual-port distributed RAM                   : 2
-# Adders/Subtractors                                   : 5
+ 4x1-bit single-port distributed Read Only RAM         : 1
+ 64x7-bit single-port distributed Read Only RAM        : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 3
  26-bit adder                                          : 1
- 32-bit adder                                          : 3
- 32-bit subtractor                                     : 1
+ 32-bit adder                                          : 14
+ 32-bit adder carry in                                 : 1
+ 33-bit adder carry in                                 : 1
+ 64-bit adder                                          : 2
 # Counters                                             : 1
  26-bit up counter                                     : 1
-# Registers                                            : 41
- Flip-Flops                                            : 41
-# Comparators                                          : 2
+# Registers                                            : 558
+ Flip-Flops                                            : 558
+# Comparators                                          : 3
+ 32-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 39
- 1-bit 2-to-1 multiplexer                              : 29
- 32-bit 2-to-1 multiplexer                             : 8
+# Multiplexers                                         : 454
+ 1-bit 2-to-1 multiplexer                              : 301
+ 1-bit 3-to-1 multiplexer                              : 5
+ 16-bit 2-to-1 multiplexer                             : 13
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 118
  32-bit 4-to-1 multiplexer                             : 1
- 5-bit 2-to-1 multiplexer                              : 1
-# Xors                                                 : 3
- 1-bit xor2                                            : 3
+ 5-bit 2-to-1 multiplexer                              : 3
+ 64-bit 2-to-1 multiplexer                             : 8
+# Xors                                                 : 11
+ 1-bit xor2                                            : 6
+ 32-bit xor2                                           : 4
+ 64-bit xor2                                           : 1
 
 =========================================================================
 
@@ -378,19 +724,540 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
+Optimizing unit <HILO_reg> ...
+
 Optimizing unit <TOP> ...
 
 Optimizing unit <MIPS> ...
 
 Optimizing unit <PC> ...
 
-Optimizing unit <ALU> ...
+Optimizing unit <ALU_Wrapper> ...
+
+Optimizing unit <alu> ...
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_32> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_33> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_34> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_35> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_36> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_37> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_38> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_39> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_40> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_41> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_42> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_43> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_44> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_45> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_46> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_47> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_48> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_49> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_50> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_51> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_52> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_53> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_54> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_55> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_56> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_57> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_58> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_59> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_60> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_61> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_62> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_63> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Hi_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/HiLO_reg1/reg_Lo_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.dividend_temp_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.result_sign> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.divisor_temp_unsigned_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/done> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result1_multi_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/Result2_multi_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op2_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_div_MSB_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_8> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_9> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_10> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_11> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_13> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_14> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_15> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_16> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_17> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_18> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_19> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_20> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_21> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_22> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_23> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_24> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_25> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_26> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_27> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_28> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_29> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_30> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand2_31> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_6> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_operand1_7> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <MIPS1/PC1/PC_out_0> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <MIPS1/PC1/PC_out_1> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MIPS1/ALU_Wrapper1/ALU1/state> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_31> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_29> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_28> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_27> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_26> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_25> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_24> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_23> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_22> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_21> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_20> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_19> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_18> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_17> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_16> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_15> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_14> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_13> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_12> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_11> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_10> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_9> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_8> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_7> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_6> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_5> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_4> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_3> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_2> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_1> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.remainder_0> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_63> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_62> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_61> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_60> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_59> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_58> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_57> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_56> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_55> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_54> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_53> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_52> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_51> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_50> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_49> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_48> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_47> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_46> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_45> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_44> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_43> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_42> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_41> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_40> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_39> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_38> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_37> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_36> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_35> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_34> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_33> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_32> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_31> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_30> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_29> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_28> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_27> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_26> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_25> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_24> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_23> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_22> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_21> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_20> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_19> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_18> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_17> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_16> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_15> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_14> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_13> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_12> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_11> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_10> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_9> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_8> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_7> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_6> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_5> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_4> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_3> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_2> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_1> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_0> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_15> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_14> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_13> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_12> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_11> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_10> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_9> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_8> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_7> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_6> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_5> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_4> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_3> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_2> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_1> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count_0> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.quotient_31> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_15> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_14> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_13> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_12> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_11> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_10> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_9> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_8> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_7> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_6> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_5> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_4> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_3> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_2> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_1> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2677 - Node <MIPS1/ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.count_0> of sequential type is unconnected in block <TOP>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -422,19 +1289,19 @@ Top Level Output File Name         : TOP.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 906
+# BELS                             : 982
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 50
-#      LUT2                        : 6
-#      LUT3                        : 34
-#      LUT4                        : 56
-#      LUT5                        : 81
-#      LUT6                        : 337
+#      INV                         : 4
+#      LUT1                        : 105
+#      LUT2                        : 34
+#      LUT3                        : 48
+#      LUT4                        : 75
+#      LUT5                        : 110
+#      LUT6                        : 265
 #      MUXCY                       : 185
-#      MUXF7                       : 1
+#      MUXF7                       : 5
 #      VCC                         : 1
-#      XORCY                       : 151
+#      XORCY                       : 149
 # FlipFlops/Latches                : 65
 #      FD                          : 27
 #      FDC                         : 29
@@ -459,16 +1326,16 @@ Selected Device : 7a100tcsg324-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:              65  out of  126800     0%  
- Number of Slice LUTs:                  743  out of  63400     1%  
-    Number used as Logic:               567  out of  63400     0%  
+ Number of Slice LUTs:                  817  out of  63400     1%  
+    Number used as Logic:               641  out of  63400     1%  
     Number used as Memory:              176  out of  19000     0%  
        Number used as RAM:              176
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    744
-   Number with an unused Flip Flop:     679  out of    744    91%  
-   Number with an unused LUT:             1  out of    744     0%  
-   Number of fully used LUT-FF pairs:    64  out of    744     8%  
+ Number of LUT Flip Flop pairs used:    822
+   Number with an unused Flip Flop:     757  out of    822    92%  
+   Number with an unused LUT:             5  out of    822     0%  
+   Number of fully used LUT-FF pairs:    60  out of    822     7%  
    Number of unique control sets:         3
 
 IO Utilization: 
@@ -511,9 +1378,9 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 11.427ns (Maximum Frequency: 87.511MHz)
-   Minimum input arrival time before clock: 3.538ns
-   Maximum output required time after clock: 1.028ns
+   Minimum period: 37.770ns (Maximum Frequency: 26.476MHz)
+   Minimum input arrival time before clock: 2.337ns
+   Maximum output required time after clock: 36.578ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -570,83 +1437,116 @@ Delay:               2.743ns (Levels of Logic = 27)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 11.427ns (frequency: 87.511MHz)
-  Total number of paths / destination ports: 623721809 / 562
+  Clock period: 37.770ns (frequency: 26.476MHz)
+  Total number of paths / destination ports: 20986488972 / 556
 -------------------------------------------------------------------------
-Delay:               11.427ns (Levels of Logic = 36)
-  Source:            MIPS1/PC1/PC_out_23 (FF)
+Delay:               37.770ns (Levels of Logic = 71)
+  Source:            MIPS1/PC1/PC_out_8 (FF)
   Destination:       MIPS1/PC1/PC_out_2 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: MIPS1/PC1/PC_out_23 to MIPS1/PC1/PC_out_2
+  Data Path: MIPS1/PC1/PC_out_8 to MIPS1/PC1/PC_out_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              4   0.478   0.959  MIPS1/PC1/PC_out_23 (MIPS1/PC1/PC_out_23)
-     LUT6:I0->O           63   0.124   0.875  Addr_Instr[31]_GND_5_o_equal_8_o<31>3 (Addr_Instr[31]_GND_5_o_equal_8_o<31>2)
-     LUT4:I1->O            2   0.124   0.427  Addr_Instr[31]_GND_5_o_equal_8_o<31>5_1 (Addr_Instr[31]_GND_5_o_equal_8_o<31>5)
-     LUT5:I4->O           93   0.124   0.942  MIPS1/ALUSrc_INV_71_o11 (MIPS1/ALUSrc_INV_71_o)
-     LUT6:I2->O            1   0.124   0.000  MIPS1/ALU1/Msub_AminusB_lut<0> (MIPS1/ALU1/Msub_AminusB_lut<0>)
-     MUXCY:S->O            1   0.472   0.000  MIPS1/ALU1/Msub_AminusB_cy<0> (MIPS1/ALU1/Msub_AminusB_cy<0>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<1> (MIPS1/ALU1/Msub_AminusB_cy<1>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<2> (MIPS1/ALU1/Msub_AminusB_cy<2>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<3> (MIPS1/ALU1/Msub_AminusB_cy<3>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<4> (MIPS1/ALU1/Msub_AminusB_cy<4>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<5> (MIPS1/ALU1/Msub_AminusB_cy<5>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<6> (MIPS1/ALU1/Msub_AminusB_cy<6>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<7> (MIPS1/ALU1/Msub_AminusB_cy<7>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<8> (MIPS1/ALU1/Msub_AminusB_cy<8>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<9> (MIPS1/ALU1/Msub_AminusB_cy<9>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<10> (MIPS1/ALU1/Msub_AminusB_cy<10>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<11> (MIPS1/ALU1/Msub_AminusB_cy<11>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<12> (MIPS1/ALU1/Msub_AminusB_cy<12>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<13> (MIPS1/ALU1/Msub_AminusB_cy<13>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<14> (MIPS1/ALU1/Msub_AminusB_cy<14>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<15> (MIPS1/ALU1/Msub_AminusB_cy<15>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<16> (MIPS1/ALU1/Msub_AminusB_cy<16>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<17> (MIPS1/ALU1/Msub_AminusB_cy<17>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<18> (MIPS1/ALU1/Msub_AminusB_cy<18>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<19> (MIPS1/ALU1/Msub_AminusB_cy<19>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/ALU1/Msub_AminusB_cy<20> (MIPS1/ALU1/Msub_AminusB_cy<20>)
-     XORCY:CI->O           2   0.510   0.925  MIPS1/ALU1/Msub_AminusB_xor<21> (MIPS1/ALU1/AminusB<21>)
-     LUT6:I1->O            1   0.124   0.000  MIPS1/Branch_ALU_zero_AND_49_o_wg_lut<1> (MIPS1/Branch_ALU_zero_AND_49_o_wg_lut<1>)
-     MUXCY:S->O            1   0.472   0.000  MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<1> (MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<1>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<2> (MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<2>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<3> (MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<3>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<4> (MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<4>)
-     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<5> (MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<5>)
-     MUXCY:CI->O          55   0.334   0.579  MIPS1/Branch_ALU_zero_AND_49_o_wg_cy<6> (MIPS1/Branch_ALU_zero_AND_49_o)
-     LUT6:I5->O            1   0.124   0.939  MIPS1/Mmux_PC_in141 (MIPS1/PC_in<21>)
-     LUT6:I0->O            1   0.124   0.776  MIPS1/PC1/RESET_PC_in[31]_OR_32_o5 (MIPS1/PC1/RESET_PC_in[31]_OR_32_o5)
-     LUT6:I2->O           30   0.124   0.551  MIPS1/PC1/RESET_PC_in[31]_OR_32_o6 (MIPS1/PC1/RESET_PC_in[31]_OR_32_o)
+     FDC:C->Q              4   0.478   0.441  MIPS1/PC1/PC_out_8 (MIPS1/PC1/PC_out_8)
+     LUT1:I0->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8>_rt (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8>_rt)
+     XORCY:LI->O           2   0.233   0.945  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<8> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<8>)
+     LUT6:I0->O            7   0.124   0.576  MIPS1/Mmux_PC_in561 (Addr_Instr<8>)
+     LUT3:I1->O            2   0.124   0.722  Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<1>_SW0 (N0)
+     LUT6:I3->O            2   0.124   0.427  Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<1> (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<12>)
+     LUT2:I1->O            8   0.124   0.467  Mmux_Instr121 (Instr<1>)
+     LUT2:I1->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<3> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<3>)
+     XORCY:LI->O           2   0.233   0.925  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<3> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<3>)
+     LUT5:I0->O           13   0.124   0.856  MIPS1/Mmux_PC_in46 (LED_9_OBUF)
+     LUT6:I2->O            1   0.124   0.421  Mram_Addr_Instr[9]_GND_5_o_wide_mux_8_OUT511 (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<2>)
+     LUT2:I1->O           25   0.124   0.572  Mmux_Instr231 (Instr<2>)
+     LUT2:I1->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<4> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<4>)
+     XORCY:LI->O           2   0.233   0.925  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<4> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<4>)
+     LUT5:I0->O           12   0.124   0.788  MIPS1/Mmux_PC_in48 (LED_10_OBUF)
+     LUT6:I3->O            3   0.124   0.435  Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<26> (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<19>)
+     LUT2:I1->O            8   0.124   0.822  Mmux_Instr221 (Instr<29>)
+     LUT5:I1->O           94   0.124   1.085  MIPS1_ControlUnit1/Mram__n0077111 (MIPS1/ALUOp<1>)
+     LUT5:I0->O           80   0.124   0.879  MIPS1/ALU_Wrapper1/Mmux_ALU_Control<0>11 (MIPS1/ALU_Wrapper1/ALU_Control<0>)
+     LUT4:I1->O           60   0.124   0.935  MIPS1/Branch_ALU_greater_AND_41_o1 (MIPS1/Branch_ALU_greater_AND_41_o)
+     LUT6:I2->O           14   0.124   1.024  MIPS1/Mmux_PC_in541 (LED_13_OBUF)
+     LUT6:I0->O            1   0.124   0.421  Mram_Addr_Instr[9]_GND_5_o_wide_mux_8_OUT4611 (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<31>)
+     LUT2:I1->O           55   0.124   0.874  Mmux_Instr251 (Instr<31>)
+     LUT3:I0->O           20   0.124   0.546  MIPS1/Instr[20]_Instr[31]_AND_44_o11 (MIPS1/Instr[20]_Instr[31]_AND_44_o1)
+     LUT2:I1->O           42   0.124   1.074  MIPS1/ControlUnit1/Mram_Jump11 (MIPS1/ControlUnit1/Mram_Jump)
+     LUT6:I1->O           13   0.124   1.019  MIPS1/Mmux_PC_in42 (LED_8_OBUF)
+     LUT6:I0->O            1   0.124   0.421  Mram_Addr_Instr[9]_GND_5_o_wide_mux_8_OUT39111 (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<27>)
+     LUT2:I1->O           27   0.124   1.070  Mmux_Instr201 (Instr<27>)
+     LUT5:I0->O           96   0.124   0.883  MIPS1_Branch1 (MIPS1/ALUOp<0>)
+     LUT3:I0->O           18   0.124   1.031  MIPS1/Instr[5]_ALUOp[1]_AND_39_o2 (MIPS1/Instr[5]_ALUOp[1]_AND_39_o)
+     LUT5:I0->O            3   0.124   0.953  MIPS1/Mmux_ALU_InB21 (MIPS1/ALU_InB<10>)
+     LUT6:I0->O            1   0.124   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_lut<0> (MIPS1/Branch_ALU_zero_AND_40_o_wg_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<0> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<1> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<2> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<3> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<4> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<5> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<6> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<7> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<8> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<8>)
+     MUXCY:CI->O           1   0.334   0.716  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<9> (MIPS1/Branch_ALU_zero_AND_40_o1)
+     LUT3:I0->O           60   0.124   0.695  MIPS1/Branch_ALU_zero_AND_40_o41 (MIPS1/Branch_ALU_zero_AND_40_o)
+     LUT2:I0->O           51   0.124   1.076  MIPS1/Mmux_PC_in11311 (MIPS1/Mmux_PC_in1131)
+     LUT5:I0->O            2   0.124   0.945  MIPS1/Mmux_PC_in26 (Addr_Instr<21>)
+     LUT6:I0->O            1   0.124   0.939  Addr_Instr[31]_GND_5_o_equal_8_o<31>1 (Addr_Instr[31]_GND_5_o_equal_8_o<31>)
+     LUT6:I0->O           15   0.124   0.628  Addr_Instr[31]_GND_5_o_equal_8_o<31>5 (Addr_Instr[31]_GND_5_o_equal_8_o)
+     LUT2:I0->O            8   0.124   0.467  Mmux_Instr11 (Instr<0>)
+     LUT2:I1->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<2> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<2>)
+     MUXCY:S->O            1   0.472   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<2> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<3> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<4> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<5> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<6> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<7> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<9> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<10> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<11> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<12> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<13> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<14> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<15> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<16> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<17> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<18> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<19> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<20> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<21> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<21>)
+     XORCY:CI->O           2   0.510   0.945  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<22> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<22>)
+     LUT6:I0->O            3   0.124   0.435  MIPS1/Mmux_PC_in281 (LED_14_OBUF)
+     LUT6:I5->O           30   0.124   0.551  MIPS1/PC1/RESET_PC_in[31]_OR_32_o6 (MIPS1/PC1/RESET_PC_in[31]_OR_32_o)
      FDC:CLR                   0.494          MIPS1/PC1/PC_out_30
     ----------------------------------------
-    Total                     11.427ns (4.454ns logic, 6.973ns route)
-                                       (39.0% logic, 61.0% route)
+    Total                     37.770ns (8.837ns logic, 28.933ns route)
+                                       (23.4% logic, 76.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 88 / 62
+  Total number of paths / destination ports: 62 / 62
 -------------------------------------------------------------------------
-Offset:              3.538ns (Levels of Logic = 5)
-  Source:            DIP<8> (PAD)
-  Destination:       MIPS1/RegFile1/Mram_registers2 (RAM)
+Offset:              2.337ns (Levels of Logic = 3)
+  Source:            DIP<4> (PAD)
+  Destination:       MIPS1/RegFile1/Mram_registers1 (RAM)
   Destination Clock: CLK rising
 
-  Data Path: DIP<8> to MIPS1/RegFile1/Mram_registers2
+  Data Path: DIP<4> to MIPS1/RegFile1/Mram_registers1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.945  DIP_8_IBUF (DIP_8_IBUF)
-     LUT6:I0->O            1   0.124   0.421  MemRead_dec_DIP_AND_51_o16_SW2 (N111)
-     LUT6:I5->O            1   0.124   0.536  MemRead_dec_DIP_AND_51_o18_SW6 (N86)
-     LUT6:I4->O            1   0.124   0.421  MIPS1/Mmux_WriteData_Reg311_SW1 (N27)
-     LUT6:I5->O            2   0.124   0.405  MIPS1/Mmux_WriteData_Reg311 (MIPS1/WriteData_Reg<8>)
-     RAM32M:DIB0               0.313          MIPS1/RegFile1/Mram_registers12
+     IBUF:I->O             1   0.001   0.939  DIP_4_IBUF (DIP_4_IBUF)
+     LUT6:I0->O            1   0.124   0.421  MIPS1/Mmux_WriteData_Reg541 (MIPS1/Mmux_WriteData_Reg54)
+     LUT5:I4->O            2   0.124   0.405  MIPS1/Mmux_WriteData_Reg542 (MIPS1/WriteData_Reg<4>)
+     RAM32M:DIC0               0.323          MIPS1/RegFile1/Mram_registers11
     ----------------------------------------
-    Total                      3.538ns (0.810ns logic, 2.728ns route)
-                                       (22.9% logic, 77.1% route)
+    Total                      2.337ns (0.572ns logic, 1.765ns route)
+                                       (24.5% logic, 75.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_undiv'
@@ -669,22 +1569,92 @@ Offset:              0.877ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 15 / 15
+  Total number of paths / destination ports: 53473631 / 15
 -------------------------------------------------------------------------
-Offset:              1.028ns (Levels of Logic = 1)
-  Source:            MIPS1/PC1/PC_out_7 (FF)
-  Destination:       LED<13> (PAD)
+Offset:              36.578ns (Levels of Logic = 71)
+  Source:            MIPS1/PC1/PC_out_8 (FF)
+  Destination:       LED<14> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: MIPS1/PC1/PC_out_7 to LED<13>
+  Data Path: MIPS1/PC1/PC_out_8 to LED<14>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             25   0.478   0.550  MIPS1/PC1/PC_out_7 (MIPS1/PC1/PC_out_7)
-     OBUF:I->O                 0.000          LED_13_OBUF (LED<13>)
+     FDC:C->Q              4   0.478   0.441  MIPS1/PC1/PC_out_8 (MIPS1/PC1/PC_out_8)
+     LUT1:I0->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8>_rt (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8>_rt)
+     XORCY:LI->O           2   0.233   0.945  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<8> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<8>)
+     LUT6:I0->O            7   0.124   0.576  MIPS1/Mmux_PC_in561 (Addr_Instr<8>)
+     LUT3:I1->O            2   0.124   0.722  Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<1>_SW0 (N0)
+     LUT6:I3->O            2   0.124   0.427  Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<1> (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<12>)
+     LUT2:I1->O            8   0.124   0.467  Mmux_Instr121 (Instr<1>)
+     LUT2:I1->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<3> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<3>)
+     XORCY:LI->O           2   0.233   0.925  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<3> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<3>)
+     LUT5:I0->O           13   0.124   0.856  MIPS1/Mmux_PC_in46 (LED_9_OBUF)
+     LUT6:I2->O            1   0.124   0.421  Mram_Addr_Instr[9]_GND_5_o_wide_mux_8_OUT511 (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<2>)
+     LUT2:I1->O           25   0.124   0.572  Mmux_Instr231 (Instr<2>)
+     LUT2:I1->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<4> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<4>)
+     XORCY:LI->O           2   0.233   0.925  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<4> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<4>)
+     LUT5:I0->O           12   0.124   0.788  MIPS1/Mmux_PC_in48 (LED_10_OBUF)
+     LUT6:I3->O            3   0.124   0.435  Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<26> (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<19>)
+     LUT2:I1->O            8   0.124   0.822  Mmux_Instr221 (Instr<29>)
+     LUT5:I1->O           94   0.124   1.085  MIPS1_ControlUnit1/Mram__n0077111 (MIPS1/ALUOp<1>)
+     LUT5:I0->O           80   0.124   0.879  MIPS1/ALU_Wrapper1/Mmux_ALU_Control<0>11 (MIPS1/ALU_Wrapper1/ALU_Control<0>)
+     LUT4:I1->O           60   0.124   0.935  MIPS1/Branch_ALU_greater_AND_41_o1 (MIPS1/Branch_ALU_greater_AND_41_o)
+     LUT6:I2->O           14   0.124   1.024  MIPS1/Mmux_PC_in541 (LED_13_OBUF)
+     LUT6:I0->O            1   0.124   0.421  Mram_Addr_Instr[9]_GND_5_o_wide_mux_8_OUT4611 (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<31>)
+     LUT2:I1->O           55   0.124   0.874  Mmux_Instr251 (Instr<31>)
+     LUT3:I0->O           20   0.124   0.546  MIPS1/Instr[20]_Instr[31]_AND_44_o11 (MIPS1/Instr[20]_Instr[31]_AND_44_o1)
+     LUT2:I1->O           42   0.124   1.074  MIPS1/ControlUnit1/Mram_Jump11 (MIPS1/ControlUnit1/Mram_Jump)
+     LUT6:I1->O           13   0.124   1.019  MIPS1/Mmux_PC_in42 (LED_8_OBUF)
+     LUT6:I0->O            1   0.124   0.421  Mram_Addr_Instr[9]_GND_5_o_wide_mux_8_OUT39111 (Addr_Instr[9]_GND_5_o_wide_mux_8_OUT<27>)
+     LUT2:I1->O           27   0.124   1.070  Mmux_Instr201 (Instr<27>)
+     LUT5:I0->O           96   0.124   0.883  MIPS1_Branch1 (MIPS1/ALUOp<0>)
+     LUT3:I0->O           18   0.124   1.031  MIPS1/Instr[5]_ALUOp[1]_AND_39_o2 (MIPS1/Instr[5]_ALUOp[1]_AND_39_o)
+     LUT5:I0->O            3   0.124   0.953  MIPS1/Mmux_ALU_InB21 (MIPS1/ALU_InB<10>)
+     LUT6:I0->O            1   0.124   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_lut<0> (MIPS1/Branch_ALU_zero_AND_40_o_wg_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<0> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<1> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<2> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<3> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<4> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<5> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<6> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<7> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<8> (MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<8>)
+     MUXCY:CI->O           1   0.334   0.716  MIPS1/Branch_ALU_zero_AND_40_o_wg_cy<9> (MIPS1/Branch_ALU_zero_AND_40_o1)
+     LUT3:I0->O           60   0.124   0.695  MIPS1/Branch_ALU_zero_AND_40_o41 (MIPS1/Branch_ALU_zero_AND_40_o)
+     LUT2:I0->O           51   0.124   1.076  MIPS1/Mmux_PC_in11311 (MIPS1/Mmux_PC_in1131)
+     LUT5:I0->O            2   0.124   0.945  MIPS1/Mmux_PC_in26 (Addr_Instr<21>)
+     LUT6:I0->O            1   0.124   0.939  Addr_Instr[31]_GND_5_o_equal_8_o<31>1 (Addr_Instr[31]_GND_5_o_equal_8_o<31>)
+     LUT6:I0->O           15   0.124   0.628  Addr_Instr[31]_GND_5_o_equal_8_o<31>5 (Addr_Instr[31]_GND_5_o_equal_8_o)
+     LUT2:I0->O            8   0.124   0.467  Mmux_Instr11 (Instr<0>)
+     LUT2:I1->O            1   0.124   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<2> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_lut<2>)
+     MUXCY:S->O            1   0.472   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<2> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<3> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<4> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<5> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<6> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<7> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<9> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<10> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<11> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<12> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<13> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<14> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<15> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<16> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<17> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<18> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<19> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<20> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<21> (MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_cy<21>)
+     XORCY:CI->O           2   0.510   0.945  MIPS1/Madd_PCplus4[31]_signExtendout[29]_add_18_OUT_xor<22> (MIPS1/PCplus4[31]_signExtendout[29]_add_18_OUT<22>)
+     LUT6:I0->O            3   0.124   0.413  MIPS1/Mmux_PC_in281 (LED_14_OBUF)
+     OBUF:I->O                 0.000          LED_14_OBUF (LED<14>)
     ----------------------------------------
-    Total                      1.028ns (0.478ns logic, 0.550ns route)
-                                       (46.5% logic, 53.5% route)
+    Total                     36.578ns (8.219ns logic, 28.359ns route)
+                                       (22.5% logic, 77.5% route)
 
 =========================================================================
 
@@ -696,7 +1666,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |   11.427|         |         |         |
+CLK            |   37.770|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLK_undiv
@@ -710,14 +1680,14 @@ CLK_undiv      |    2.743|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.53 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.59 secs
  
 --> 
 
-Total memory usage is 354620 kilobytes
+Total memory usage is 370932 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :  643 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

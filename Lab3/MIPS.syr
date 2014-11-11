@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: MIPS.prj
 
@@ -132,6 +132,9 @@ Parsing architecture <arch_PC> of entity <pc>.
 Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\SignExtend.vhd" into library work
 Parsing entity <Sign_Extend>.
 Parsing architecture <Behavioral> of entity <sign_extend>.
+Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\HILO_reg.vhd" into library work
+Parsing entity <HILO_reg>.
+Parsing architecture <Behavioral> of entity <hilo_reg>.
 Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\ALU_Wrapper.vhd" into library work
 Parsing entity <ALU_Wrapper>.
 Parsing architecture <Behavioral> of entity <alu_wrapper>.
@@ -141,15 +144,943 @@ Parsing architecture <arch_ControlUnit> of entity <controlunit>.
 Parsing VHDL file "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" into library work
 Parsing entity <MIPS>.
 Parsing architecture <arch_MIPS> of entity <mips>.
-ERROR:HDLCompiler:69 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" Line 307: <alu_out> is not declared.
-ERROR:HDLCompiler:69 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" Line 312: <alu_out> is not declared.
-ERROR:HDLCompiler:854 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" Line 39: Unit <arch_mips> ignored due to previous errors.
-VHDL file C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <MIPS> (architecture <arch_MIPS>) with generics from library <work>.
+
+Elaborating entity <PC> (architecture <arch_PC>) from library <work>.
+
+Elaborating entity <ALU_Wrapper> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <alu> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ADDSUB> (architecture <ADDSUB_arch>) with generics from library <work>.
+
+Elaborating entity <Shift> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sll_shifter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <srl_shifter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sra_shifter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ControlUnit> (architecture <arch_ControlUnit>) from library <work>.
+
+Elaborating entity <RegFile> (architecture <arch_RegFile>) from library <work>.
+
+Elaborating entity <HILO_reg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Sign_Extend> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MIPS>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd".
+        width = 32
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" line 229: Output port <Operand1> of the instance <ALU_Wrapper1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" line 229: Output port <Operand2> of the instance <ALU_Wrapper1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\MIPS.vhd" line 229: Output port <Status> of the instance <ALU_Wrapper1> is unconnected or connected to loadless signal.
+    Found 32-bit adder for signal <PCplus4[31]_signExtendout[29]_add_18_OUT> created at line 334.
+    Found 32-bit adder for signal <PCplus4[31]_GND_5_o_add_51_OUT[31:0]> created at line 358.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  47 Multiplexer(s).
+Unit <MIPS> synthesized.
+
+Synthesizing Unit <PC>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\PC.vhd".
+    Found 1-bit register for signal <PC_out<31>>.
+    Found 1-bit register for signal <PC_out<30>>.
+    Found 1-bit register for signal <PC_out<29>>.
+    Found 1-bit register for signal <PC_out<28>>.
+    Found 1-bit register for signal <PC_out<27>>.
+    Found 1-bit register for signal <PC_out<26>>.
+    Found 1-bit register for signal <PC_out<25>>.
+    Found 1-bit register for signal <PC_out<24>>.
+    Found 1-bit register for signal <PC_out<23>>.
+    Found 1-bit register for signal <PC_out<22>>.
+    Found 1-bit register for signal <PC_out<21>>.
+    Found 1-bit register for signal <PC_out<20>>.
+    Found 1-bit register for signal <PC_out<19>>.
+    Found 1-bit register for signal <PC_out<18>>.
+    Found 1-bit register for signal <PC_out<17>>.
+    Found 1-bit register for signal <PC_out<16>>.
+    Found 1-bit register for signal <PC_out<15>>.
+    Found 1-bit register for signal <PC_out<14>>.
+    Found 1-bit register for signal <PC_out<13>>.
+    Found 1-bit register for signal <PC_out<12>>.
+    Found 1-bit register for signal <PC_out<11>>.
+    Found 1-bit register for signal <PC_out<10>>.
+    Found 1-bit register for signal <PC_out<9>>.
+    Found 1-bit register for signal <PC_out<8>>.
+    Found 1-bit register for signal <PC_out<7>>.
+    Found 1-bit register for signal <PC_out<6>>.
+    Found 1-bit register for signal <PC_out<5>>.
+    Found 1-bit register for signal <PC_out<4>>.
+    Found 1-bit register for signal <PC_out<3>>.
+    Found 1-bit register for signal <PC_out<2>>.
+    Found 1-bit register for signal <PC_out<1>>.
+    Found 1-bit register for signal <PC_out<0>>.
+    Found 32-bit adder for signal <PC_in[31]_GND_6_o_add_1_OUT> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <PC> synthesized.
+
+Synthesizing Unit <ALU_Wrapper>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\ALU_Wrapper.vhd".
+WARNING:Xst:653 - Signal <Operand1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <Operand2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<4>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<3>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<2>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<1>> created at line 95.
+    Found 1-bit 3-to-1 multiplexer for signal <ALU_Control<0>> created at line 95.
+    Summary:
+	inferred  10 Multiplexer(s).
+Unit <ALU_Wrapper> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\alu.vhd".
+        width = 32
+    Found 16-bit register for signal <MULTI_CYCLE_PROCESS.count>.
+    Found 64-bit register for signal <MULTI_CYCLE_PROCESS.temp_sum>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.quotient>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.remainder>.
+    Found 16-bit register for signal <MULTI_CYCLE_PROCESS.div_count>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_div_MSB>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_operand1>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_operand2>.
+    Found 1-bit register for signal <done>.
+    Found 64-bit register for signal <MULTI_CYCLE_PROCESS.temp_op1>.
+    Found 1-bit register for signal <MULTI_CYCLE_PROCESS.result_sign>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.temp_op2>.
+    Found 32-bit register for signal <Result2_multi>.
+    Found 32-bit register for signal <Result1_multi>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.dividend_temp>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.divisor_temp>.
+    Found 32-bit register for signal <MULTI_CYCLE_PROCESS.divisor_temp_unsigned>.
+    Found 1-bit register for signal <state>.
+    Found 32-bit adder for signal <Operand1[31]_GND_9_o_add_33_OUT> created at line 333.
+    Found 32-bit adder for signal <Operand2[31]_GND_9_o_add_35_OUT> created at line 335.
+    Found 16-bit adder for signal <MULTI_CYCLE_PROCESS.count[15]_GND_9_o_add_38_OUT> created at line 343.
+    Found 64-bit adder for signal <MULTI_CYCLE_PROCESS.temp_sum[63]_GND_9_o_add_41_OUT> created at line 347.
+    Found 64-bit adder for signal <MULTI_CYCLE_PROCESS.temp_sum[63]_MULTI_CYCLE_PROCESS.temp_op1[63]_add_44_OUT> created at line 356.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.temp_div_MSB[31]_MULTI_CYCLE_PROCESS.temp_operand2[31]_add_102_OUT> created at line 412.
+    Found 32-bit adder for signal <n0479> created at line 420.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.temp_div_MSB[31]_MULTI_CYCLE_PROCESS.temp_operand2[31]_add_105_OUT> created at line 420.
+    Found 16-bit adder for signal <MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT> created at line 434.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.temp_div_MSB[31]_MULTI_CYCLE_PROCESS.temp_operand2[31]_add_113_OUT> created at line 441.
+    Found 32-bit adder for signal <Operand1[31]_GND_9_o_add_127_OUT> created at line 482.
+    Found 32-bit adder for signal <Operand2[31]_GND_9_o_add_130_OUT> created at line 485.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.remainder[31]_MULTI_CYCLE_PROCESS.divisor_temp_unsigned[31]_add_133_OUT> created at line 495.
+    Found 32-bit adder for signal <n0496> created at line 500.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.remainder[31]_GND_9_o_add_136_OUT> created at line 500.
+    Found 16-bit adder for signal <MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_138_OUT> created at line 510.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.divisor_temp_unsigned[31]_MULTI_CYCLE_PROCESS.remainder[31]_add_140_OUT> created at line 514.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.quotient[31]_GND_9_o_add_143_OUT> created at line 517.
+    Found 32-bit adder for signal <MULTI_CYCLE_PROCESS.remainder[31]_GND_9_o_add_146_OUT> created at line 520.
+    Found 32-bit comparator greater for signal <Operand1[31]_Operand2[31]_LessThan_66_o> created at line 378
+    Summary:
+	inferred  18 Adder/Subtractor(s).
+	inferred 515 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 132 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <ADDSUB>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture\ADDSUB.vhd".
+        width = 32
+    Found 33-bit adder for signal <n0020> created at line 58.
+    Found 33-bit adder for signal <SUM_WIDER> created at line 58.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <ADDSUB> synthesized.
+
+Synthesizing Unit <Shift>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture\Shift.vhd".
+    Found 32-bit 4-to-1 multiplexer for signal <Result1> created at line 37.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Shift> synthesized.
+
+Synthesizing Unit <sll_shifter>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\sll_shifter.vhd".
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <sll_shifter> synthesized.
+
+Synthesizing Unit <srl_shifter>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\srl_shifter.vhd".
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <srl_shifter> synthesized.
+
+Synthesizing Unit <sra_shifter>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\sra_shifter.vhd".
+    Summary:
+	inferred 186 Multiplexer(s).
+Unit <sra_shifter> synthesized.
+
+Synthesizing Unit <ControlUnit>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\ControlUnit.vhd".
+    Found 32x1-bit Read Only RAM for signal <Jump>
+    Found 8x1-bit Read Only RAM for signal <ALUSrc>
+    Found 32x1-bit Read Only RAM for signal <SignExtend>
+    Found 4x1-bit Read Only RAM for signal <RegDst>
+    Found 64x7-bit Read Only RAM for signal <_n0077>
+    Summary:
+	inferred   5 RAM(s).
+Unit <ControlUnit> synthesized.
+
+Synthesizing Unit <RegFile>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\RegFile.vhd".
+    Found 32x32-bit dual-port RAM <Mram_registers> for signal <registers>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <RegFile> synthesized.
+
+Synthesizing Unit <HILO_reg>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\HILO_reg.vhd".
+    Found 32-bit register for signal <reg_Lo>.
+    Found 32-bit register for signal <reg_Hi>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <HILO_reg> synthesized.
+
+Synthesizing Unit <Sign_Extend>.
+    Related source file is "C:\Users\Sebastian\Documents\GitHub\Computer-Architecture3C\Lab3\SignExtend.vhd".
+    Summary:
+	no macro.
+Unit <Sign_Extend> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 32x1-bit single-port Read Only RAM                    : 2
+ 32x32-bit dual-port RAM                               : 2
+ 4x1-bit single-port Read Only RAM                     : 1
+ 64x7-bit single-port Read Only RAM                    : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 23
+ 16-bit adder                                          : 3
+ 32-bit adder                                          : 16
+ 33-bit adder                                          : 2
+ 64-bit adder                                          : 2
+# Registers                                            : 52
+ 1-bit register                                        : 35
+ 16-bit register                                       : 2
+ 32-bit register                                       : 13
+ 64-bit register                                       : 2
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 388
+ 1-bit 2-to-1 multiplexer                              : 237
+ 1-bit 3-to-1 multiplexer                              : 5
+ 16-bit 2-to-1 multiplexer                             : 13
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 115
+ 32-bit 4-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 3
+ 64-bit 2-to-1 multiplexer                             : 9
+# Xors                                                 : 11
+ 1-bit xor2                                            : 6
+ 32-bit xor2                                           : 4
+ 64-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_0> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_1> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_2> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_3> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_4> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_5> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_6> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_7> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_8> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_9> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_10> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_11> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_12> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_13> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_14> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_15> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_16> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_17> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_18> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_19> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_20> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_21> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_22> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_23> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_24> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_25> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_26> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_27> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_28> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_29> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_30> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_0> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_1> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_2> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_3> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_4> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_5> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_6> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_7> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_8> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_9> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_10> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_11> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_12> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_13> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_14> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_15> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_16> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_17> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_18> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_19> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_20> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_21> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_22> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_23> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_24> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_25> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_26> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_27> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_28> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_29> of sequential type is unconnected in block <ALU1>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_30> of sequential type is unconnected in block <ALU1>.
+
+Synthesizing (advanced) Unit <ControlUnit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Jump> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode<5:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Jump>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ALUSrc> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode<3:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <ALUSrc>        |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RegDst> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode<2:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <RegDst>        |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0077> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SignExtend> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(opcode<5>,opcode<3:0>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <SignExtend>    |          |
+    -----------------------------------------------------------------------
+Unit <ControlUnit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RegFile>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr_Reg> |          |
+    |     diA            | connected to signal <WriteData_Reg> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <ReadAddr1_Reg> |          |
+    |     doB            | connected to signal <ReadData1_Reg> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr_Reg> |          |
+    |     diA            | connected to signal <WriteData_Reg> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <ReadAddr2_Reg> |          |
+    |     doB            | connected to signal <ReadData2_Reg> |          |
+    -----------------------------------------------------------------------
+Unit <RegFile> synthesized (advanced).
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_0> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_1> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_2> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_3> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_4> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_5> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_6> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_7> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_8> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_9> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_10> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_11> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_12> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_13> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_14> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_15> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_16> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_17> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_18> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_19> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_20> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_21> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_22> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_23> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_24> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_25> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_26> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_27> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_28> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_29> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.dividend_temp_30> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_0> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_1> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_2> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_3> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_4> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_5> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_6> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_7> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_8> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_9> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_10> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_11> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_12> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_13> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_14> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_15> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_16> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_17> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_18> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_19> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_20> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_21> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_22> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_23> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_24> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_25> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_26> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_27> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_28> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_29> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <MULTI_CYCLE_PROCESS.divisor_temp_30> of sequential type is unconnected in block <alu>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 32x1-bit single-port distributed Read Only RAM        : 2
+ 32x32-bit dual-port distributed RAM                   : 2
+ 4x1-bit single-port distributed Read Only RAM         : 1
+ 64x7-bit single-port distributed Read Only RAM        : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 21
+ 16-bit adder                                          : 3
+ 32-bit adder                                          : 14
+ 32-bit adder carry in                                 : 1
+ 33-bit adder carry in                                 : 1
+ 64-bit adder                                          : 2
+# Registers                                            : 549
+ Flip-Flops                                            : 549
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 451
+ 1-bit 2-to-1 multiplexer                              : 301
+ 1-bit 3-to-1 multiplexer                              : 5
+ 16-bit 2-to-1 multiplexer                             : 13
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 115
+ 32-bit 4-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 3
+ 64-bit 2-to-1 multiplexer                             : 8
+# Xors                                                 : 11
+ 1-bit xor2                                            : 6
+ 32-bit xor2                                           : 4
+ 64-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <HILO_reg> ...
+
+Optimizing unit <MIPS> ...
+WARNING:Xst:2973 - All outputs of instance <HiLO_reg1> of block <HILO_reg> are unconnected in block <MIPS>. Underlying logic will be removed.
+
+Optimizing unit <PC> ...
+
+Optimizing unit <ALU_Wrapper> ...
+
+Optimizing unit <alu> ...
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_31> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_30> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_29> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_28> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_27> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_26> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_25> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_24> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_23> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_22> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_21> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_20> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_19> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_18> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_17> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_16> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_15> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_14> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_13> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_12> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_11> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_10> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_9> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_8> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_7> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_5> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_4> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_3> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_2> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/Result2_multi_0> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_63> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_62> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_61> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_60> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_59> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_58> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_57> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_56> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_55> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_54> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_53> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_52> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_51> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_50> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_49> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_48> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_47> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_46> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_45> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_44> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_43> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_42> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_41> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_40> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_39> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_38> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_37> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_36> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_35> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_34> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_33> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_sum_32> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_63> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_62> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_61> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_60> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_59> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_58> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_57> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_56> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_55> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_54> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_53> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_52> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_51> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_50> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_49> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_48> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_47> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_46> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_45> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_44> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_43> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_42> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_41> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_40> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_39> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_38> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_37> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_36> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_35> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_34> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_33> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.temp_op1_32> of sequential type is unconnected in block <MIPS>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MIPS, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 389
+ Flip-Flops                                            : 389
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MIPS.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3574
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 29
+#      LUT2                        : 222
+#      LUT3                        : 339
+#      LUT4                        : 136
+#      LUT5                        : 512
+#      LUT6                        : 1111
+#      MUXCY                       : 596
+#      MUXF7                       : 39
+#      VCC                         : 1
+#      XORCY                       : 586
+# FlipFlops/Latches                : 389
+#      FD                          : 177
+#      FDC                         : 31
+#      FDE                         : 129
+#      FDP                         : 1
+#      FDR                         : 49
+#      FDRE                        : 2
+# RAMS                             : 14
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 163
+#      IBUF                        : 65
+#      OBUF                        : 98
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             389  out of  126800     0%  
+ Number of Slice LUTs:                 2399  out of  63400     3%  
+    Number used as Logic:              2351  out of  63400     3%  
+    Number used as Memory:               48  out of  19000     0%  
+       Number used as RAM:               48
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2414
+   Number with an unused Flip Flop:    2025  out of   2414    83%  
+   Number with an unused LUT:            15  out of   2414     0%  
+   Number of fully used LUT-FF pairs:   374  out of   2414    15%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                         164
+ Number of bonded IOBs:                 164  out of    210    78%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 403   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 9.385ns (Maximum Frequency: 106.556MHz)
+   Minimum input arrival time before clock: 11.478ns
+   Maximum output required time after clock: 7.758ns
+   Maximum combinational path delay: 9.901ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 9.385ns (frequency: 106.556MHz)
+  Total number of paths / destination ports: 22762302 / 737
+-------------------------------------------------------------------------
+Delay:               9.385ns (Levels of Logic = 21)
+  Source:            RegFile1/Mram_registers3 (RAM)
+  Destination:       ALU_Wrapper1/ALU1/Result1_multi_31 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: RegFile1/Mram_registers3 to ALU_Wrapper1/ALU1/Result1_multi_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32M:WCLK->DOA0     9   1.640   0.589  RegFile1/Mram_registers3 (ReadData1_Reg<12>)
+     LUT6:I4->O           12   0.124   1.011  Mmux_ALU_InB4 (ALU_InB<12>)
+     LUT6:I0->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Operand2[31]_GND_9_o_equal_63_o<31>2_SW0 (N836)
+     LUT6:I5->O            3   0.124   0.435  ALU_Wrapper1/ALU1/Operand2[31]_GND_9_o_equal_63_o<31>3 (ALU_Wrapper1/ALU1/Operand2[31]_GND_9_o_equal_63_o<31>3)
+     LUT6:I5->O            5   0.124   0.743  ALU_Wrapper1/ALU1/Operand2[31]_GND_9_o_equal_63_o<31>7_1 (ALU_Wrapper1/ALU1/Operand2[31]_GND_9_o_equal_63_o<31>7)
+     LUT6:I3->O            1   0.124   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_lut<0> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<0> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<1> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<2> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<3> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<4> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<5> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<6> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<7> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<8> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<9> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<10> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<11> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<11>)
+     XORCY:CI->O           5   0.510   0.563  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_xor<12> (ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT<12>)
+     LUT5:I3->O            2   0.124   0.722  ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_equal_113_o<15>3_SW2 (N385)
+     LUT6:I3->O            1   0.124   0.421  ALU_Wrapper1/ALU1/_n0709_inv1 (ALU_Wrapper1/ALU1/_n0709_inv1)
+     LUT5:I4->O            2   0.124   0.405  ALU_Wrapper1/ALU1/_n0709_inv2 (ALU_Wrapper1/ALU1/_n0709_inv)
+     FDE:CE                    0.139          ALU_Wrapper1/ALU1/Result1_multi_0
+    ----------------------------------------
+    Total                      9.385ns (4.075ns logic, 5.310ns route)
+                                       (43.4% logic, 56.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 582302114 / 771
+-------------------------------------------------------------------------
+Offset:              11.478ns (Levels of Logic = 39)
+  Source:            Instr<27> (PAD)
+  Destination:       ALU_Wrapper1/ALU1/Result1_multi_31 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Instr<27> to ALU_Wrapper1/ALU1/Result1_multi_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            83   0.001   1.083  Instr_27_IBUF (Instr_27_IBUF)
+     LUT6:I1->O           15   0.124   1.031  ControlUnit1/Mram__n0077111 (ALUOp<1>)
+     LUT6:I0->O           77   0.124   0.938  Instr[5]_ALUOp[1]_AND_39_o1 (Instr[5]_ALUOp[1]_AND_39_o)
+     LUT5:I1->O           16   0.124   1.037  Mmux_ALU_InB1111 (Mmux_ALU_InB111)
+     LUT6:I0->O            2   0.124   0.782  Mmux_ALU_InB12_1 (Mmux_ALU_InB122)
+     LUT4:I0->O            1   0.124   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_lut<0> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<0> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<1> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<2> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<3> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<4> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<5> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<6> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<7> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<8> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<9> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<10> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<11> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<12> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<13> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<14> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<14>)
+     MUXCY:CI->O         177   0.334   0.720  ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<15> (ALU_Wrapper1/ALU1/Mcompar_Operand1[31]_Operand2[31]_LessThan_66_o_cy<15>)
+     LUT6:I4->O            1   0.124   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_lut<0> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<0> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<1> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<2> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<3> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<4> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<5> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<6> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<7> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<8> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<9> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<10> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<11> (ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_cy<11>)
+     XORCY:CI->O           5   0.510   0.563  ALU_Wrapper1/ALU1/Madd_MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT_xor<12> (ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_add_111_OUT<12>)
+     LUT5:I3->O            2   0.124   0.722  ALU_Wrapper1/ALU1/MULTI_CYCLE_PROCESS.div_count[15]_GND_9_o_equal_113_o<15>3_SW2 (N385)
+     LUT6:I3->O            1   0.124   0.421  ALU_Wrapper1/ALU1/_n0709_inv1 (ALU_Wrapper1/ALU1/_n0709_inv1)
+     LUT5:I4->O            2   0.124   0.405  ALU_Wrapper1/ALU1/_n0709_inv2 (ALU_Wrapper1/ALU1/_n0709_inv)
+     FDE:CE                    0.139          ALU_Wrapper1/ALU1/Result1_multi_0
+    ----------------------------------------
+    Total                     11.478ns (3.776ns logic, 7.702ns route)
+                                       (32.9% logic, 67.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 17451 / 96
+-------------------------------------------------------------------------
+Offset:              7.758ns (Levels of Logic = 11)
+  Source:            RegFile1/Mram_registers1 (RAM)
+  Destination:       Addr_Data<31> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: RegFile1/Mram_registers1 to Addr_Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32M:WCLK->DOC0     8   1.668   0.582  RegFile1/Mram_registers1 (ReadData1_Reg<4>)
+     LUT3:I1->O           19   0.124   0.655  Mmux_ALU_InA271 (ALU_InA<4>)
+     LUT5:I3->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Operand2<2>252 (ALU_Wrapper1/ALU1/Operand2<2>251)
+     LUT5:I4->O            1   0.124   0.000  ALU_Wrapper1/ALU1/Operand2<2>253_F (N935)
+     MUXF7:I0->O           3   0.365   0.435  ALU_Wrapper1/ALU1/Operand2<2>253 (ALU_Wrapper1/ALU1/Operand2<2>_mmx_out31)
+     LUT5:I4->O            2   0.124   0.427  ALU_Wrapper1/ALU1/Operand2<3>551 (ALU_Wrapper1/ALU1/Operand2<3>_mmx_out58)
+     LUT6:I5->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113810_SW0 (N901)
+     LUT6:I5->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113810 (ALU_Wrapper1/ALU1/Mmux_Result11389)
+     LUT6:I5->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113811 (ALU_Wrapper1/ALU1/Mmux_Result113810)
+     LUT5:I4->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113813_SW0 (N899)
+     LUT6:I5->O            2   0.124   0.405  ALU_Wrapper1/ALU1/Mmux_Result113813 (Addr_Data_31_OBUF)
+     OBUF:I->O                 0.000          Addr_Data_31_OBUF (Addr_Data<31>)
+    ----------------------------------------
+    Total                      7.758ns (3.149ns logic, 4.609ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 522798 / 98
+-------------------------------------------------------------------------
+Delay:               9.901ns (Levels of Logic = 15)
+  Source:            Instr<27> (PAD)
+  Destination:       Addr_Data<31> (PAD)
+
+  Data Path: Instr<27> to Addr_Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            83   0.001   1.083  Instr_27_IBUF (Instr_27_IBUF)
+     LUT6:I1->O           15   0.124   1.031  ControlUnit1/Mram__n0077111 (ALUOp<1>)
+     LUT6:I0->O           77   0.124   0.938  Instr[5]_ALUOp[1]_AND_39_o1 (Instr[5]_ALUOp[1]_AND_39_o)
+     LUT5:I1->O           16   0.124   1.037  Mmux_ALU_InB1111 (Mmux_ALU_InB111)
+     LUT6:I0->O           89   0.124   0.586  Mmux_ALU_InB12 (ALU_InB<0>)
+     LUT5:I4->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Operand2<2>252 (ALU_Wrapper1/ALU1/Operand2<2>251)
+     LUT5:I4->O            1   0.124   0.000  ALU_Wrapper1/ALU1/Operand2<2>253_F (N935)
+     MUXF7:I0->O           3   0.365   0.435  ALU_Wrapper1/ALU1/Operand2<2>253 (ALU_Wrapper1/ALU1/Operand2<2>_mmx_out31)
+     LUT5:I4->O            2   0.124   0.427  ALU_Wrapper1/ALU1/Operand2<3>551 (ALU_Wrapper1/ALU1/Operand2<3>_mmx_out58)
+     LUT6:I5->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113810_SW0 (N901)
+     LUT6:I5->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113810 (ALU_Wrapper1/ALU1/Mmux_Result11389)
+     LUT6:I5->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113811 (ALU_Wrapper1/ALU1/Mmux_Result113810)
+     LUT5:I4->O            1   0.124   0.421  ALU_Wrapper1/ALU1/Mmux_Result113813_SW0 (N899)
+     LUT6:I5->O            2   0.124   0.405  ALU_Wrapper1/ALU1/Mmux_Result113813 (Addr_Data_31_OBUF)
+     OBUF:I->O                 0.000          Addr_Data_31_OBUF (Addr_Data<31>)
+    ----------------------------------------
+    Total                      9.901ns (1.854ns logic, 8.047ns route)
+                                       (18.7% logic, 81.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    9.385|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 32.67 secs
+ 
 --> 
 
-Total memory usage is 233328 kilobytes
+Total memory usage is 403636 kilobytes
 
-Number of errors   :    3 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  223 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

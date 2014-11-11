@@ -34,7 +34,7 @@ entity HILO_reg is
            ReadLo_Reg : out  STD_LOGIC_VECTOR (31 downto 0);
            WriteHi_Reg : in  STD_LOGIC_VECTOR (31 downto 0);
            WriteLo_Reg : in  STD_LOGIC_VECTOR (31 downto 0);
-           RegHiLoWrite : in  STD_LOGIC;
+           RegHiLoWrite : in  STD_LOGIC; --enable
            CLK : in  STD_LOGIC);
 end HILO_reg;
 
@@ -49,7 +49,7 @@ begin
 ReadHi_Reg <= reg_Hi;
 ReadLo_Reg <= reg_Lo;
 
-process (CLK)
+process (CLK, WriteHi_Reg, WriteLo_Reg, RegHiLoWrite)
 
 begin
 
@@ -57,7 +57,10 @@ if (CLK'event and CLK = '1') then
 	if RegHiLoWrite = '1' then
 			reg_Hi <= WriteHi_Reg;
 			reg_Lo <= WriteLo_Reg;
-			end if;
+	--else
+		--do nothing
+	end if;	
+		-- do nothing	
 end if;			
 end process;
 

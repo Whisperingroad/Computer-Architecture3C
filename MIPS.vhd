@@ -61,13 +61,13 @@ component ALU_Wrapper is
 			  ALU_InA : in  STD_LOGIC_VECTOR(31 downto 0);
            ALU_InB : in  STD_LOGIC_VECTOR(31 downto 0);
            Control : in  STD_LOGIC_VECTOR(7 downto 0);
-			  Result1 : out  STD_LOGIC_VECTOR (31 downto 0);
-           Result2 : out STD_LOGIC_VECTOR (31 downto 0);
-           Operand1 : out  STD_LOGIC_VECTOR(31 downto 0);
-           Operand2 : out  STD_LOGIC_VECTOR(31 downto 0);
-           Status	 : out  STD_LOGIC_VECTOR(2 downto 0);
-			  ALU_zero		: out STD_LOGIC;
-			  ALU_greater	: out STD_LOGIC);
+--			  Result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+--           Result2 : out STD_LOGIC_VECTOR (31 downto 0);
+--           Operand1 : out  STD_LOGIC_VECTOR(31 downto 0);
+--           Operand2 : out  STD_LOGIC_VECTOR(31 downto 0);
+--           Status	 : out  STD_LOGIC_VECTOR(2 downto 0);
+--			  ALU_zero		: out STD_LOGIC;
+--			  ALU_greater	: out STD_LOGIC);
 	   
 end component;
 
@@ -147,15 +147,15 @@ end component;
 	signal	PCplus4 		:  STD_LOGIC_VECTOR (31 downto 0);
 
 ----------------------------------------------------------------
--- ALU Signals
+-- ALU Wrapper Signals
 ----------------------------------------------------------------
 	signal	ALU_InA 		:  STD_LOGIC_VECTOR (31 downto 0);
 	signal	ALU_InB 		:  STD_LOGIC_VECTOR (31 downto 0);
-	signal	ALU_Control	:  STD_LOGIC_VECTOR (7 downto 0);
+--	signal	ALU_Control	:  STD_LOGIC_VECTOR (7 downto 0);
 	signal   Control     :  STD_LOGIC_VECTOR(7 downto 0);
 
-	signal	Operand1		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
-	signal	Operand2		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
+--	signal	Operand1		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
+--	signal	Operand2		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
 	signal	Result1		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
 	signal	Result2		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
 	signal	Status		: STD_LOGIC_VECTOR (2 downto 0) 			:= (others=>'0');
@@ -192,7 +192,7 @@ end component;
    signal ReadLo_Reg : STD_LOGIC_VECTOR (31 downto 0);
    signal WriteHi_Reg : STD_LOGIC_VECTOR (31 downto 0);
    signal WriteLo_Reg : STD_LOGIC_VECTOR (31 downto 0);
-	
+	signal RegHiLoWrite :  STD_LOGIC;	
 ----------------------------------------------------------------
 -- Sign Extend
 ----------------------------------------------------------------
@@ -232,8 +232,8 @@ ALU_Wrapper1				: ALU_Wrapper port map
 						ALU_InA 	=> ALU_InA, 
 						ALU_InB 	=> ALU_InB, 
 						Control => Control, 
-					   Operand1 => Operand1,
-						Operand2	=> Operand2,
+--					   Operand1 => Operand1,
+--						Operand2	=> Operand2,
 						Result1 => Result1,
 						Result2 => Result2,
 						Status => Status,
@@ -305,8 +305,8 @@ SignExtend1 				: Sign_Extend port map
 
 --Decoding instructions for Control Unit
 opcode <= Instr(31 downto 26);
-ReadAddr1_Reg <= Instr(25 downto 21); 
-ReadAddr2_Reg <= Instr(20 downto 16);
+ReadAddr1_Reg <= Instr(25 downto 21); --rs
+ReadAddr2_Reg <= Instr(20 downto 16); --rt
 
 
 --SignExtend for address offset
@@ -314,19 +314,20 @@ ReadAddr2_Reg <= Instr(20 downto 16);
 signExtendin <= Instr(15 downto 0);
 
 
---Inputs for ALU
-ALU_Control <= ALUOp & Instr(5 downto 0);
+--Inputs for ALU Wrappper
+Control <= ALUOp & Instr(5 downto 0);
 
---Unconditional
-ALU_InA  <= ReadData1_Reg;
+ALU_InA  <= ReadData2_Reg when Instr(5 downto 3) ="000" and ALUOp = "10" else --sll,sllv,sra,srl
+ReadData1_Reg;
 
---for R type and BEQ operations 
 
-ALU_InB <= ReadData2_Reg when ALUSrc = '0' else 
+ALU_InB <= x"000000" &"000" & Instr(10 downto 6) when Instr(5 downto 2)= "0000" and ALUOp = "10" else --sll, sra,srl
+           ReadData1_Reg when Control(5 downto 0) = "000100" else --sllv
+ReadData2_Reg when ALUSrc = '0' else  --remaining r-type instructions and BEQ
 Instr(15 downto 0)& x"0000" when InstrtoReg = '1' else -- LUI
 --x"0000" & Instr(15 downto 0) when ALUOp = "11" and InstrtoReg = '0' else --ORI
 x"0000" & Instr(15 downto 0) when SignExtend = '0' else -- ORI
-signExtendout; -- LW/SW/SLTI
+signExtendout; -- LW/SW/SLTI?/ADDI (15 downto 0)-offset
 
 --PC
 PC_in <= PCplus4 + (signExtendout(29 downto 0) & "00")  when ((Branch = '1') and (ALU_zero = '1')) else -- Branch (beq) 
@@ -335,19 +336,34 @@ ReadData1_Reg when ((Jump = '1') and (Control(5 downto 0) = "001000")) else --JR
 PCplus4(31 downto 28) &(Instr(25 downto 0)& "00") when Jump = '1' else --J/JAL
 PCplus4; -- R-type / Lw/ Sw
 
+--HiLo
+RegHiLoWrite<= '1' when (Control(5 downto 0) = "011000") or (Control(5 downto 0) = "011001") --MULT/MULTU
+or (Control(5 downto 0) = "011010") or (Control(5 downto 0) = "011011") else --DIV/DIVU
+'0';
+
+WriteLo_Reg <= Result1 when (Control(5 downto 0) = "011000") or (Control(5 downto 0) = "011001") --MULT/MULTU
+or (Control(5 downto 0) = "011010") or (Control(5 downto 0) = "011011") else --DIV/DIVU
+x"00000000"; --do nothing
+WriteHi_Reg <= Result2 when (Control(5 downto 0) = "011000") or (Control(5 downto 0) = "011001") --MULT/MULTU 
+or (Control(5 downto 0) = "011010") or (Control(5 downto 0) = "011011") else --DIV/DIVU
+x"00000000"; --do nothing
+
 --RegFile
-WriteAddr_Reg <= x"1111" when ((Instr(20 downto 16) = x"1001") and (ALU_greater = '1') and (Control(4 downto 0) = "00001")) else --BGEZAL 
-x"1111" when (Instr(31 downto 26) = x"000011") else --JAL
+WriteAddr_Reg <= "11111" when ((Instr(20 downto 16) = "10001") and (ALU_greater = '1') and (Instr(31 downto 26) = "000001")) else --BGEZAL 
+"11111" when (Instr(31 downto 26) = "000011") else --JAL
 Instr(20 downto 16) when RegDst = '0' else -- choose rt or rd 
 Instr(15 downto 11);
 
-WriteData_Reg <= (PCplus4 + 4) when ((Instr(20 downto 16) = x"1001") and (ALU_greater = '1') and (Control(4 downto 0) = "00001")) else --BGEZAL 
-(PCplus4 + 4) when (Instr(31 downto 26) = x"000011") else --JAL
+WriteData_Reg <= (PCplus4 + 4) when ((Instr(20 downto 16) = "10001") and (ALU_greater = '1') and (Instr(31 downto 26) = "000001")) else --BGEZAL 
+(PCplus4 + 4) when (Instr(31 downto 26) = "000011") else --JAL
+ReadHi_Reg when (Control(5 downto 0) = "010000") else --MFHI
+ReadLo_Reg when (Control(5 downto 0) = "010010") else --MFLO 
 Result1 when MemtoReg = '0' else -- choose rt or rd
 DATA_In; 
 
+ 
 --Output to top file
-Addr_Instr <= PCplus4;
+Addr_Instr <= PC_in;
 Addr_Data <= Result1;
 Data_Out <= ReadData2_Reg;
  

@@ -131,7 +131,7 @@ begin
 		SignExtend <= '1';
 		RegWrite <= '1';
 		RegDst <= '0';
-		
+	
 
 
 	--ADD,SUB, OR, NOR, SLT , MULT, MULTU, MFHI, MFLO, SLL, SRA, SRL, SLLV, SLTU, JR

@@ -120,6 +120,18 @@ component RegFile is
 end component;
 
 ----------------------------------------------------------------
+-- HiLo Registers
+----------------------------------------------------------------
+component HILO_reg is
+    Port ( ReadHi_Reg : out  STD_LOGIC_VECTOR (31 downto 0);
+           ReadLo_Reg : out  STD_LOGIC_VECTOR (31 downto 0);
+           WriteHi_Reg : in  STD_LOGIC_VECTOR (31 downto 0);
+           WriteLo_Reg : in  STD_LOGIC_VECTOR (31 downto 0);
+           RegHiLoWrite : in  STD_LOGIC;
+           CLK : in  STD_LOGIC);	
+end component;
+
+----------------------------------------------------------------
 -- Sign Extend
 ----------------------------------------------------------------
 component Sign_Extend is
@@ -171,6 +183,13 @@ end component;
 	signal	ReadData2_Reg 	:  STD_LOGIC_VECTOR (31 downto 0);
 	signal	WriteAddr_Reg	:  STD_LOGIC_VECTOR (4 downto 0); 
 	signal	WriteData_Reg 	:  STD_LOGIC_VECTOR (31 downto 0);
+----------------------------------------------------------------
+-- HiLo register signals
+----------------------------------------------------------------	
+	signal ReadHi_Reg : STD_LOGIC_VECTOR (31 downto 0);
+   signal ReadLo_Reg : STD_LOGIC_VECTOR (31 downto 0);
+   signal WriteHi_Reg : STD_LOGIC_VECTOR (31 downto 0);
+   signal WriteLo_Reg : STD_LOGIC_VECTOR (31 downto 0);
 	
 ----------------------------------------------------------------
 -- Sign Extend
@@ -180,7 +199,8 @@ end component;
 ----------------------------------------------------------------
 -- Other Signals
 ----------------------------------------------------------------
-	--<any other signals used goes here>
+
+
  
 
 ----------------------------------------------------------------	
@@ -252,6 +272,19 @@ RegFile1			: RegFile port map
 						RegWrite 		=> RegWrite,
 						CLK 				=> CLK				
 						);
+----------------------------------------------------------------
+-- HiLo Register port map
+----------------------------------------------------------------						
+HiLO_reg1 :		HILO_reg port map
+						(
+						ReadHi_Reg => ReadHi_Reg,
+						ReadLo_Reg => ReadLo_Reg ,
+						WriteHi_Reg => WriteHi_Reg,
+						WriteLo_Reg	=> WriteLo_Reg,
+						RegHiLoWrite => RegHiLoWrite,
+						CLK => CLK
+						);
+-- additional control signal for RegHiLoWrite?						
 
 ----------------------------------------------------------------
 -- SignExtend port map

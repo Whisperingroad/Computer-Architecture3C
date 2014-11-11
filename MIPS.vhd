@@ -138,7 +138,7 @@ end component;
 	signal	ALU_InB 		:  STD_LOGIC_VECTOR (31 downto 0);
 	signal	ALU_Control	:  STD_LOGIC_VECTOR (7 downto 0);
 	signal   Control     :  STD_LOGIC(7 downto 0);
-	signal   rt          : STD_LOGIC_VECTOR (4 downto 0);
+
 	signal	Operand1		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
 	signal	Operand2		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
 	signal	Result1		: STD_LOGIC_VECTOR (width-1 downto 0) 	:= (others=>'0');
@@ -207,8 +207,7 @@ ALU_Wrapper				: ALU_Wrapper port map
 						(
 						Clk => Clk,
 						ALU_InA 	=> ALU_InA, 
-						ALU_InB 	=> ALU_InB,
-						rt => rt,
+						ALU_InB 	=> ALU_InB, 
 						Control => Control, 
 					   Operand1 => Operand1,
 						Operand2	=> Operand2,
@@ -281,9 +280,9 @@ ReadAddr2_Reg <= Instr(20 downto 16);
 signExtendin <= Instr(15 downto 0);
 
 
---Inputs for ALU Wrapper
-Control <= ALUOp & Instr(5 downto 0);--funct
-rt <= Instr(20 downto 16);
+--Inputs for ALU
+ALU_Control <= ALUOp & Instr(5 downto 0);
+
 --Unconditional
 ALU_InA  <= ReadData1_Reg;
 
@@ -304,7 +303,7 @@ PC_out; -- R-type / Lw/ Sw
 --RegFile
 WriteAddr_Reg <= Instr(20 downto 16) when RegDst = '0' else -- choose rt or rd
 Instr(15 downto 11);
-WriteData_Reg <= Result1 when MemtoReg = '0' else -- choose rt or rd
+WriteData_Reg <= ALU_Out when MemtoReg = '0' else -- choose rt or rd
 DATA_In; 
 
 --Output to top file

@@ -25,6 +25,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ALU.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ControlUnit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ControlUnit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="MIPS.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="MIPS.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MIPS.ngc"/>
@@ -126,6 +129,7 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
@@ -147,15 +151,17 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1415618337" xil_pn:in_ck="3827626018226391589" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1375406056831408966" xil_pn:start_ts="1415618335">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>

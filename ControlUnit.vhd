@@ -57,7 +57,6 @@ begin
 		RegWrite <= '1';
 		RegDst <= '0';
 		
-		
 	--sw
 	when "101011" => 
 	
@@ -73,9 +72,26 @@ begin
 		RegWrite <= '0';
 		RegDst <= 'X';	
 
+
+	--addi
+	when "001000" =>
+		ALUOp <= "00";
+		Branch <= '0';
+		Jump <= '0';
+		MemRead <= '0';
+		MemToReg <= '0';
+		InstrtoReg <= '0';
+		MemWrite <= '0';
+		ALUSrc <= '0';
+		SignExtend <= '1';
+		RegWrite <= '1';
+		RegDst <= '1';
+
+
 	--lui (upper immediate bits)
 	when "001111" => 
-		ALUOp <= "11";
+		--ALUOp <= "11";
+		ALUOp <= "00";
 		Branch <= '0';
 		Jump <= '0';
 		MemRead <= '0';
@@ -89,7 +105,8 @@ begin
 
 	--ori
 	when "001101" => 
-		ALUOp <= "11";
+		--ALUOp <= "11";
+		ALUOp <= "00";
 		Branch <= '0';
 		Jump <= '0';
 		MemRead <= '0';
@@ -101,11 +118,14 @@ begin
 		RegWrite <= '1';
 		RegDst <= '0';
 
-	--ADD,SUB, OR, NOR, SLT
+
+	--ADD,SUB, OR, NOR, SLT , MULT, MULTU, MFHI, MFLO, SLL, SRA, SRL, SLLV, SLTU, JR
+	-- jr The jr instruction loads the PC register with a value stored in a register. (Rtype)
+
 	when "000000" =>
 		ALUOp <= "10";
 		Branch <= '0';
-		Jump <= '0';
+		Jump <= '0' ;
 		MemRead <= '0';
 		MemToReg <= '0';
 		InstrtoReg <= '0';
@@ -114,8 +134,9 @@ begin
 		SignExtend <= '0';
 		RegWrite <= '1';
 		RegDst <= '1';
-	
-	--beq
+
+
+	--beq   Branch if rs and rt are equal. If rs = rt, PC ? PC + 4 + imm.
 	when "000100" =>
 		ALUOp <= "01";
 		Branch <= '1';
@@ -128,8 +149,38 @@ begin
 		SignExtend <= '1';
 		RegWrite <= '0';
 		RegDst <= 'X';
-	
-	--j
+
+	--bgez / bgezal  
+	--Branch if rs is greater than or equal to zero. If rs = 0, PC ? PC + 4 + imm.
+	--Branch on Greater Than or Equal to Zero and Link
+	when "000001" =>
+		ALUOp <= "01";
+		Branch <= '1';
+		Jump <= '0';
+		MemRead <= '0';
+		MemToReg <= 'X';
+		InstrtoReg <= '0';
+		MemWrite <= '0';
+		ALUSrc <= '0';
+		SignExtend <= '1';
+		RegWrite <= '0';
+		RegDst <= 'X';
+		
+--	--bgezal  Branch on Greater Than or Equal to Zero and Link
+--	when "000001" =>
+--		ALUOp <= "01";
+--		Branch <= '1';
+--		Jump <= '0';
+--		MemRead <= '0';
+--		MemToReg <= '0';
+--		InstrtoReg <= '0';
+--		MemWrite <= '0';
+--		ALUSrc <= '0';
+--		SignExtend <= '1';
+--		RegWrite <= '1';
+--		RegDst <= '1';
+
+	--j 
 	when "000010" =>
 		ALUOp <= "XX";
 		Branch <= '0';
@@ -143,6 +194,20 @@ begin
 		RegWrite <= '0';
 		RegDst <= 'X';
 
+
+	--jal  Like the j instruction, except that the return address is loaded into the $ra register.
+	when "000011" =>
+		ALUOp <= "XX";
+		Branch <= '0';
+		Jump <= '1';
+		MemRead <= '0';
+		MemToReg <= 'X';
+		InstrtoReg <= '0';
+		MemWrite <= '0';
+		ALUSrc <= 'X';
+		SignExtend <= '0';
+		RegWrite <= '1';
+		RegDst <= '0';
 
 	when others =>
 		ALUOp <= "XX";
@@ -161,4 +226,6 @@ begin
 	end case;
 end process;
 end arch_ControlUnit;
+
+
 

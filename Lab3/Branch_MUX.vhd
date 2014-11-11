@@ -19,7 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -47,7 +47,7 @@ begin
 
 Shifted <=  (SignExtend(29 downto 0) & "00") + PC_out; 
 if (ALU_zero = '1' and Branch = '1') then
-	PC_in <= Shifted;
+	PC_in <= Shifter;
 else
 	Branch_out <= PC_out;
 end if;

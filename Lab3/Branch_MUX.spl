@@ -1,9 +1,0 @@
-[Inputs]
-ALU_greater
-ALU_zero
-Branch
-=SignExtend[31:0]=
-=PC_out[31:0]=
-[Outputs]
-=Branch_out[31:0]=
-[BiDir]
